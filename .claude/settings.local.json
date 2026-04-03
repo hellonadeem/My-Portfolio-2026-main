@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/mohd.nadeem/.nvm/versions/**)",
+      "Bash(echo $PATH)",
+      "Read(//Users/mohd.nadeem/.local/share/**)",
+      "Read(//Users/mohd.nadeem/**)",
+      "Read(//opt/homebrew/**)",
+      "Read(//usr/local/**)",
+      "Bash(brew install:*)",
+      "Bash(/opt/homebrew/bin/brew install:*)"
+    ]
+  }
+}
