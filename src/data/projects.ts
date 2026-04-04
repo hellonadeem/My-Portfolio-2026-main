@@ -213,16 +213,16 @@ The decisions that mattered most in this project happened before Figma — readi
   },
   {
     id: '03',
-    name: 'Gojek',
-    nameItalic: 'Driver App',
-    tags: ['Logistics', 'UX', 'Mobile'],
-    type: 'Senior Product Designer',
-    year: '2021 – 2022',
-    scope: 'UX Research, Interaction Design',
-    platform: 'Android',
-    img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=80',
+    name: "Snippets — Gojek's Stories",
+    nameItalic: '',
+    tags: ['Zero to One', 'Platform', 'iOS · Android'],
+    type: 'Lead Product Designer',
+    year: '2022 – 2024',
+    scope: 'Zero to One, Platform Design, Growth',
+    platform: 'iOS · Android',
+    img: '/images/cadf/snippetsthumb.png',
     group: 'gojek',
-    description: 'Optimizing the pickup experience for over 2 million driver partners across Southeast Asia',
+    description: 'Designing Gojek\'s in-app Stories channel from scratch — from inbox replacement to a live commerce and revenue-generating platform.',
     sections: [
       {
         type: 'text',
@@ -244,33 +244,33 @@ The decisions that mattered most in this project happened before Figma — readi
   },
   {
     id: '04',
-    name: 'Bank',
-    nameItalic: 'Jago',
-    tags: ['Fintech', 'Banking', 'Visual'],
-    type: 'Product Designer',
-    year: '2020 – 2021',
-    scope: 'Visual Design, UI Engineering',
+    name: 'Driver to Customer Chat',
+    nameItalic: '',
+    tags: ['Platform', 'Communication', 'iOS · Android'],
+    type: 'Lead Product Designer',
+    year: '2021 – 2023',
+    scope: 'Platform Design, Feature 0→1',
     platform: 'iOS · Android',
-    img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&q=80',
-    group: 'other',
-    description: 'Designing a seamless digital banking experience for the next generation of Indonesian savers',
+    img: '/images/transit/D2C.png',
+    group: 'gojek',
+    description: 'Consolidating order communication and in-app support into a single two-sided channel — for drivers and customers across Gojek.',
     sections: [
       {
         type: 'text',
         num: '01',
-        title: 'Banking that *feels* like the future.',
-        body: 'Bank Jago is a pioneer in Indonesian digital banking. I worked on the core banking experience, focusing on making financial management intuitive and accessible for a younger demographic.'
+        title: 'One surface for every conversation.',
+        body: 'Before GoChat, driver-to-customer communication was fragmented — phone calls that exposed personal numbers, no structured way to raise order issues, and no shared space where operational messages and support lived together. GoChat consolidated all of it.'
       },
       {
         type: 'metrics',
         items: [
-          { value: '5M+', label: 'Users', desc: 'Registered customers' },
-          { value: '4.8★', label: 'App Store', desc: 'User rating' },
-          { value: '24/7', label: 'Support', desc: 'Integrated help system' }
+          { value: '4+', label: 'Feature areas', desc: 'Calling · Tipping · Templates · Help' },
+          { value: '2yrs', label: 'Platform lifecycle', desc: '0→1 through scale' },
+          { value: '2-sided', label: 'Product', desc: 'Driver app + Customer app' }
         ]
       }
     ],
     nextProjectId: '01',
-    nextProjectName: 'Go Transit Redesign'
+    nextProjectName: 'GoTransit Pre-Booking Experience'
   }
 ];

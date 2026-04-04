@@ -273,7 +273,7 @@ export default function CADFCaseStudy() {
               </Reveal>
 
               <Reveal delay={0.06}>
-                <div className="mb-16"><Img label="Cancellation rebooking tree — 60% didn't rebook · 40% booked again" /></div>
+                <div className="mb-16"><img src="/images/cadf/firstcancel.jpg" alt="Cancellation rebooking tree — 60% didn't rebook · 40% booked again" className="w-full h-auto block" /></div>
               </Reveal>
 
               {/* — Why were users cancelling? (bar chart) — */}
@@ -360,33 +360,29 @@ export default function CADFCaseStudy() {
                 {[
                   {
                     num: '01',
-                    emoji: '😰',
-                    name: 'The Anxious Waiter',
+                    name: 'Driver not moving',
                     signal: '"Driver too far" · "Not moving"',
                     pct: '~20% of CADF',
                     insight: 'Does not want to cancel — wants to feel safe waiting. Needs reassurance, progress signals, and context.',
                   },
                   {
                     num: '02',
-                    emoji: '⏱',
-                    name: 'The Frustrated Waiter',
+                    name: 'Waited too long',
                     signal: '"Waited too long"',
                     pct: '19.1% of CADF reasons',
                     insight: 'Has already passed their tolerance threshold. Needs earlier intervention — not friction after frustration peaks.',
                   },
                   {
                     num: '03',
-                    emoji: '🔄',
-                    name: 'The Rational Re-booker',
+                    name: 'Cancel and rebook',
                     signal: 'Cancels within first 60 sec',
                     pct: 'Serial re-booker pattern',
                     insight: 'Believes cancelling and restarting yields a faster driver. This is a perception problem — not an ETA problem.',
                   },
-                ].map(({ num, emoji, name, signal, pct, insight }) => (
+                ].map(({ num, name, signal, pct, insight }) => (
                   <Reveal key={num} delay={parseInt(num) * 0.07}>
                     <div className="border border-border p-6 space-y-3 h-full">
-                      <p className="text-[10px] tracking-[0.1em] uppercase text-ink-muted font-medium">Archetype {num}</p>
-                      <div className="text-2xl">{emoji}</div>
+                      <p className="text-[10px] tracking-[0.1em] uppercase text-ink-muted font-medium">Pattern {num}</p>
                       <h4 className="font-sans text-[15px] font-semibold text-ink leading-[1.3]">{name}</h4>
                       <p className="text-[12px] font-medium text-accent">{pct}</p>
                       <p className="text-[11px] font-light text-ink-muted leading-[1.6]">{signal}</p>
@@ -396,9 +392,6 @@ export default function CADFCaseStudy() {
                 ))}
               </div>
 
-              <Reveal delay={0.1}>
-                <div className="mb-4"><Img label="Archetype segmentation diagram" /></div>
-              </Reveal>
             </div>
           </section>
 
@@ -472,7 +465,7 @@ export default function CADFCaseStudy() {
               </div>
 
               <Reveal delay={0.04}>
-                <div className="mb-4"><Img label="Four touchpoints — system overview" /></div>
+                <div className="mb-4"><img src="/images/cadf/CADF_Touchpoints.png" alt="Four touchpoints — system overview" className="w-full h-auto block" /></div>
               </Reveal>
             </div>
           </section>

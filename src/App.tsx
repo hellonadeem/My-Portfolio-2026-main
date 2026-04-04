@@ -12,6 +12,8 @@ import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import GoTransitCaseStudy from './pages/GoTransitCaseStudy';
 import CADFCaseStudy from './pages/CADFCaseStudy';
+import SnippetsCaseStudy from './pages/SnippetsCaseStudy';
+import ChatCaseStudy from './pages/ChatCaseStudy';
 import Resume from './pages/Resume';
 
 export default function App() {
@@ -30,6 +32,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/case-study/01" element={<GoTransitCaseStudy />} />
             <Route path="/case-study/02" element={<CADFCaseStudy />} />
+            <Route path="/case-study/03" element={<SnippetsCaseStudy />} />
+            <Route path="/case-study/04" element={<ChatCaseStudy />} />
             <Route path="/case-study/:id" element={<CaseStudy />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>

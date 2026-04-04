@@ -1,58 +1,16 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { projects } from '../data/projects';
 
-const TABS = [
-  { key: 'gojek', label: 'Gojek' },
-  { key: 'other', label: 'Other Projects' },
-] as const;
-
-type TabKey = typeof TABS[number]['key'];
-
 export default function Work() {
-  const [activeTab, setActiveTab] = useState<TabKey>('gojek');
-
-  const filtered = projects;
-
   return (
     <section id="work" className="bg-paper px-6 md:px-12 pt-16 pb-0">
       <div className="max-w-[1100px] mx-auto w-full">
 
-        {/* Tab bar */}
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-1">
-            {TABS.map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
-                className={`relative px-4 py-2 text-[12px] tracking-[0.06em] uppercase font-medium rounded-full transition-colors duration-200 ${
-                  activeTab === tab.key
-                    ? 'bg-ink text-paper'
-                    : 'text-ink-muted hover:text-ink'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-          <span className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium">
-            {projects.length} projects
-          </span>
-        </div>
-
         {/* Project list */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col"
-          >
-            {filtered.map((project, index) => (
+        <div className="flex flex-col">
+            {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 16 }}
@@ -114,8 +72,7 @@ export default function Work() {
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+        </div>
 
       </div>
     </section>
