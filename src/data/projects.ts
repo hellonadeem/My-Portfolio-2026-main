@@ -213,7 +213,7 @@ The decisions that mattered most in this project happened before Figma — readi
   },
   {
     id: '03',
-    name: "Snippets — Gojek's Stories",
+    name: "Snippets: Gojek's Stories",
     nameItalic: '',
     tags: ['Zero to One', 'Platform', 'iOS · Android'],
     type: 'Lead Product Designer',
@@ -222,7 +222,7 @@ The decisions that mattered most in this project happened before Figma — readi
     platform: 'iOS · Android',
     img: '/images/cadf/snippetsthumb.png',
     group: 'gojek',
-    description: 'Designing Gojek\'s in-app Stories channel from scratch — from inbox replacement to a live commerce and revenue-generating platform.',
+    description: 'Designing Gojek\'s in-app Stories channel from scratch, from inbox replacement to a live commerce and revenue-generating platform.',
     sections: [
       {
         type: 'text',
@@ -253,7 +253,7 @@ The decisions that mattered most in this project happened before Figma — readi
     platform: 'iOS · Android',
     img: '/images/transit/D2C.png',
     group: 'gojek',
-    description: 'Consolidating order communication and in-app support into a single two-sided channel — for drivers and customers across Gojek.',
+    description: 'Consolidating order communication and in-app support into a single two-sided channel for drivers and customers across Gojek.',
     sections: [
       {
         type: 'text',

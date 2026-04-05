@@ -35,6 +35,7 @@ function Reveal({
   );
 }
 
+
 function Img({
   label,
   portrait = false,
@@ -45,7 +46,6 @@ function Img({
   cols?: number;
 }) {
   const h = portrait ? 'h-[260px]' : 'h-[180px]';
-
   const box = (key: string | number) => (
     <div
       key={key}
@@ -56,7 +56,6 @@ function Img({
       </span>
     </div>
   );
-
   if (cols === 1) return <>{box('single')}</>;
   return (
     <div className="grid gap-3" style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
@@ -68,7 +67,7 @@ function Img({
 function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
     <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">
-      {num} — {label}
+      {num}. {label}
     </p>
   );
 }
@@ -237,7 +236,7 @@ export default function CADFCaseStudy() {
                   { label: 'Data', body: 'Partnered with the data team to segment cancellation logs before any design work began.' },
                   { label: 'Engineering', body: 'Worked closely with ML and engineering to understand how the dispatch system works.' },
                   { label: 'Research', body: 'Collaborated with UX research to validate early hypotheses and anecdotal feedback.' },
-                  { label: 'Writing', body: 'Worked closely with a UX writer throughout — this project was fundamentally about reassurance and communication.' },
+                  { label: 'Writing', body: 'Worked closely with a UX writer throughout. This project was fundamentally about reassurance and communication.' },
                   { label: 'PM', body: 'Partnered with my PM to prioritise experiments and phase the solution rollout.' },
                 ].map(({ label, body }, i) => (
                   <Reveal key={label} delay={i * 0.05}>
@@ -310,7 +309,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.06}>
                 <p className="text-[13px] font-light text-ink-soft mb-16 max-w-[660px] pt-3 border-t border-border">
-                  <span className="font-semibold text-ink">Insight: </span>Cancellation risk spiked in the first 60 sec after driver assignment — before the customer saw any movement.
+                  <span className="font-semibold text-ink">Insight: </span>Cancellation risk spiked in the first 60 sec after driver assignment, before the customer saw any movement.
                 </p>
               </Reveal>
 
@@ -352,7 +351,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-12">
-                  Cancellation reason data allowed segmentation into three psychologically distinct archetypes — each requiring a fundamentally different design response. This framing became the shared language across product, engineering, and data discussions.
+                  Cancellation reason data allowed segmentation into three psychologically distinct archetypes, each requiring a fundamentally different design response. This framing became the shared language across product, engineering, and data discussions.
                 </p>
               </Reveal>
 
@@ -363,21 +362,21 @@ export default function CADFCaseStudy() {
                     name: 'Driver not moving',
                     signal: '"Driver too far" · "Not moving"',
                     pct: '~20% of CADF',
-                    insight: 'Does not want to cancel — wants to feel safe waiting. Needs reassurance, progress signals, and context.',
+                    insight: 'Does not want to cancel. Wants to feel safe waiting. Needs reassurance, progress signals, and context.',
                   },
                   {
                     num: '02',
                     name: 'Waited too long',
                     signal: '"Waited too long"',
                     pct: '19.1% of CADF reasons',
-                    insight: 'Has already passed their tolerance threshold. Needs earlier intervention — not friction after frustration peaks.',
+                    insight: 'Has already passed their tolerance threshold. Needs earlier intervention, not friction after frustration peaks.',
                   },
                   {
                     num: '03',
                     name: 'Cancel and rebook',
                     signal: 'Cancels within first 60 sec',
                     pct: 'Serial re-booker pattern',
-                    insight: 'Believes cancelling and restarting yields a faster driver. This is a perception problem — not an ETA problem.',
+                    insight: 'Believes cancelling and restarting yields a faster driver. This is a perception problem, not an ETA problem.',
                   },
                 ].map(({ num, name, signal, pct, insight }) => (
                   <Reveal key={num} delay={parseInt(num) * 0.07}>
@@ -407,7 +406,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-10">
-                  The intervention was not a single screen redesign. It was a communication system spanning four distinct moments in the post-driver-assignment journey — each carrying a specific job tied to a specific archetype's anxiety.
+                  The intervention was not a single screen redesign. It was a communication system spanning four distinct moments in the post-driver-assignment journey, each carrying a specific job tied to a specific archetype's anxiety.
                 </p>
               </Reveal>
 
@@ -423,13 +422,13 @@ export default function CADFCaseStudy() {
                     num: '01',
                     title: 'Push Notification',
                     broken: 'Static template regardless of driver distance, demand, or cold-start state.',
-                    opportunity: 'Three dynamic PN themes — Urgency, Quality, Reliability — selected by ML dispatch signals.',
+                    opportunity: 'Three dynamic PN themes (Urgency, Quality, Reliability) selected by ML dispatch signals.',
                   },
                   {
                     num: '02',
-                    title: 'OTW Screen — Green Banner',
+                    title: 'OTW Screen: Green Banner',
                     broken: "Static ETA and driver details. No context for why ETA was high or driver wasn't moving.",
-                    opportunity: 'Dynamic contextual signals: traffic, cold-start state, or driver quality — triggered only when relevant.',
+                    opportunity: 'Dynamic contextual signals: traffic, cold-start state, or driver quality. Triggered only when relevant.',
                   },
                   {
                     num: '03',
@@ -440,7 +439,7 @@ export default function CADFCaseStudy() {
                   {
                     num: '04',
                     title: 'Cancellation Friction',
-                    broken: 'Selecting a reason immediately triggered cancellation — no confirmation, no context, no reconsideration.',
+                    broken: 'Selecting a reason immediately triggered cancellation, with no confirmation, no context, no reconsideration.',
                     opportunity: 'Segmented friction personalised by cancellation timing and behaviour pattern. Different response for each archetype.',
                   },
                 ].map(({ num, title, broken, opportunity }, i) => (
@@ -482,7 +481,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-16">
-                  Each touchpoint was designed to be testable in isolation — so metric movement could be attributed to specific interventions rather than a bundled release.
+                  Each touchpoint was designed to be testable in isolation, so metric movement could be attributed to specific interventions rather than a bundled release.
                 </p>
               </Reveal>
 
@@ -499,11 +498,11 @@ export default function CADFCaseStudy() {
                     <div className="space-y-5">
                       <div>
                         <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Control</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Static PN template — same message regardless of driver distance, demand, or cold-start state.</p>
+                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Static PN template, same message regardless of driver distance, demand, or cold-start state.</p>
                       </div>
                       <div>
                         <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Treatment Variants</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft"><span className="font-medium text-ink">Urgency</span> — confirms pickup is happening. <span className="font-medium text-ink">Quality</span> — leads with driver trust signals. <span className="font-medium text-ink">Reliability</span> — cold-start: explains delay, invites action.</p>
+                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft"><span className="font-medium text-ink">Urgency</span>: confirms pickup is happening. <span className="font-medium text-ink">Quality</span>: leads with driver trust signals. <span className="font-medium text-ink">Reliability</span>: cold-start, explains delay, invites action.</p>
                       </div>
                     </div>
                   </div>
@@ -536,7 +535,7 @@ export default function CADFCaseStudy() {
                       </div>
                       <div>
                         <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Treatment</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Full-width prompt surfaced only when user signals cancel intent — high ETA or prior cancellation history detected.</p>
+                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Full-width prompt surfaced only when user signals cancel intent: high ETA or prior cancellation history detected.</p>
                       </div>
                     </div>
                   </div>
@@ -560,7 +559,7 @@ export default function CADFCaseStudy() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <div>
                       <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-3">Hypothesis</p>
-                      <p className="text-[14px] font-light leading-[1.75] text-ink-soft">Combining contextual banner signals with segmented cancellation friction — personalised to archetype — will convert a meaningful share of about-to-cancel users into waiters.</p>
+                      <p className="text-[14px] font-light leading-[1.75] text-ink-soft">Combining contextual banner signals with segmented cancellation friction, personalised to archetype, will convert a meaningful share of about-to-cancel users into waiters.</p>
                     </div>
                     <div className="space-y-5">
                       <div>
@@ -568,8 +567,8 @@ export default function CADFCaseStudy() {
                         <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Fixed ETA, no contextual communication. Selecting any cancellation reason immediately triggered cancellation.</p>
                       </div>
                       <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Variant 1 — Dynamic States</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Banner surfaces system context: nearest driver search, cold-start state, driver quality — gives users the perception that the system is actively working.</p>
+                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Variant 1: Dynamic States</p>
+                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Banner surfaces system context: nearest driver search, cold-start state, driver quality. Gives users the perception that the system is actively working.</p>
                       </div>
                     </div>
                   </div>
@@ -578,11 +577,10 @@ export default function CADFCaseStudy() {
                     <span className="text-[12px] font-light text-ink-soft">Cancellation reasons "Driver is too far" and "I've waited too long" as share of CADF</span>
                   </div>
                   <div className="mb-10"><Img label="Dynamic green banner — control vs variant 1 (dynamic states)" /></div>
-
                   <div className="space-y-5 text-[15px] font-light leading-[1.75] text-ink-soft max-w-[660px] mb-10">
-                    <p><span className="font-semibold text-ink">Variant 2 — Cancellation Friction (Rational Re-booker):</span> Friction copy challenges the core assumption: "Cancelling won't guarantee a faster driver — your current driver is already on their way." Primary CTA: Keep my driver.</p>
-                    <p><span className="font-semibold text-ink">Variant 3 — Emotional Appeal (Frustrated Waiter):</span> Driver photo + personalised message. "I'm on my way and arriving shortly. Please hold on — ETA is 5 mins." Adds a human face to the wait before the user decides.</p>
-                    <p><span className="font-semibold text-ink">Variant 4 — Repeat Canceller:</span> Reinforces that frequent cancellations may increase wait time. Offers GoCar Prioritas as an alternative for users in a hurry.</p>
+                    <p><span className="font-semibold text-ink">Variant 2, Cancellation Friction (Rational Re-booker):</span> Friction copy challenges the core assumption: "Cancelling won't guarantee a faster driver. Your current driver is already on their way." Primary CTA: Keep my driver.</p>
+                    <p><span className="font-semibold text-ink">Variant 3, Emotional Appeal (Frustrated Waiter):</span> Driver photo + personalised message. "I'm on my way and arriving shortly. Please hold on, ETA is 5 mins." Adds a human face to the wait before the user decides.</p>
+                    <p><span className="font-semibold text-ink">Variant 4, Repeat Canceller:</span> Reinforces that frequent cancellations may increase wait time. Offers GoCar Prioritas as an alternative for users in a hurry.</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3 mb-6">
@@ -590,10 +588,9 @@ export default function CADFCaseStudy() {
                     <Img label="Cancellation friction — emotional appeal (frustrated waiter)" portrait />
                   </div>
                   <div className="mb-10"><Img label="Cancellation friction — repeat canceller / Prioritas upsell" /></div>
-
                   <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
-                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Cancellation reasons dropped significantly across friction variants. Dynamic banner alone produced ~2–3% reduction. Full system — banner + segmented friction — produced the meaningful movement. The archetypes had to be treated differently; a single friction pattern across all three would not have worked.</p>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Cancellation reasons dropped significantly across friction variants. Dynamic banner alone produced ~2–3% reduction. Full system, banner and segmented friction together, produced the meaningful movement. The archetypes had to be treated differently; a single friction pattern across all three would not have worked.</p>
                   </div>
                 </div>
               </Reveal>
@@ -615,16 +612,16 @@ export default function CADFCaseStudy() {
                   {
                     val: '25% → 16%',
                     head: 'CADF Rate in Bali',
-                    body: 'Nine percentage points off a rate that had been stable at 25%. The communication system — working as a whole — moved a metric that individual experiments could not shift in isolation.',
+                    body: 'Nine percentage points off a rate that had been stable at 25%. The communication system, working as a whole, moved a metric that individual experiments could not shift in isolation.',
                   },
                   {
                     val: '~74%',
                     head: '4W Reliability (BCR) improved',
-                    body: 'Booking Completion Rate improved from a 65% baseline. Fewer cancellations meant more completed rides — and more earnings per hour for drivers.',
+                    body: 'Booking Completion Rate improved from a 65% baseline. Fewer cancellations meant more completed rides and more earnings per hour for drivers.',
                   },
                   {
                     val: '20%',
-                    head: 'Nationwide CADF — unchanged',
+                    head: 'Nationwide CADF, unchanged',
                     body: 'The intervention was scoped to Bali as a market-specific pilot. The national number held at 20%. The measurement framework was handed to the inheriting team to scale.',
                   },
                 ].map(({ val, head, body }, i) => (
@@ -649,6 +646,7 @@ export default function CADFCaseStudy() {
               <Reveal delay={0.12}>
                 <div className="mb-4"><Img label="Early impact — Bali CADF reduction" /></div>
               </Reveal>
+
             </div>
           </section>
 
@@ -663,10 +661,10 @@ export default function CADFCaseStudy() {
               </Reveal>
 
               <div className="max-w-[680px] space-y-6 text-[17px] font-light leading-[1.9] text-ink-soft mb-16">
-                <Reveal><p>Instrument before you design. The measurement framework should have been scoped in Week 1 alongside the problem definition — not after the design was in development. The inability to attribute metric movement to individual touchpoints post-ship was a process failure, not a data failure.</p></Reveal>
-                <Reveal delay={0.04}><p>Involve the ML team earlier. The discovery that the dispatch model was probabilistic — and that ETA was a distribution, not a point estimate — came mid-project. Had this been surfaced in discovery, the design direction would have shifted to progress signals from the start rather than arriving at it after a pivot.</p></Reveal>
+                <Reveal><p>Instrument before you design. The measurement framework should have been scoped in Week 1 alongside the problem definition — not after the design was in development. The inability to attribute metric movement to individual touchpoints post-ship was a process failure, not a data one.</p></Reveal>
+                <Reveal delay={0.04}><p>Involve the ML team earlier. The discovery that the dispatch model was probabilistic, and that ETA was a distribution not a point estimate, came mid-project. Had this been surfaced in discovery, the design direction would have shifted to progress signals from the start rather than arriving at it after a pivot.</p></Reveal>
                 <Reveal delay={0.06}><p>Research the driver side. The cold-start problem and the driver's experience of customer anxiety were underexplored. A driver-side research sprint would have potentially unlocked a bidirectional communication design — something the final solution approached but never fully realised.</p></Reveal>
-                <Reveal delay={0.08}><p>Prototype the failure state, not just the happy path. Most prototyping time was spent on the smooth scenario. More time should have been spent on the 12-minute ETA, peak demand, no-movement edge case — the conditions where the design was most likely to fail.</p></Reveal>
+                <Reveal delay={0.08}><p>Prototype the failure state, not just the happy path. Most prototyping time was spent on the smooth scenario. More time should have been spent on the 12-minute ETA, peak demand, no-movement edge case: the conditions where the design was most likely to fail.</p></Reveal>
               </div>
 
               <Reveal delay={0.06}>
@@ -678,7 +676,7 @@ export default function CADFCaseStudy() {
               <div className="max-w-[680px] space-y-6 text-[17px] font-light leading-[1.9] text-ink-soft">
                 <Reveal><p><strong className="font-semibold text-ink">The archetype segmentation.</strong> Framing the problem through three distinct user archetypes gave the team a shared language that cut across product, engineering, and data discussions. It made disagreements about prioritisation resolvable.</p></Reveal>
                 <Reveal delay={0.04}><p><strong className="font-semibold text-ink">The system framing.</strong> Insisting the solution be a coordinated touchpoint system rather than a single screen fix was the right call. The data confirmed it: individual touchpoints were directionally positive but statistically inconclusive in isolation.</p></Reveal>
-                <Reveal delay={0.06}><p><strong className="font-semibold text-ink">Naming the ML constraint publicly.</strong> Rather than designing around the probabilistic ETA issue silently, surfacing it as a product design constraint in a cross-functional review changed how engineering communicated the system's limitations — and improved alignment across the team.</p></Reveal>
+                <Reveal delay={0.06}><p><strong className="font-semibold text-ink">Naming the ML constraint publicly.</strong> Rather than designing around the probabilistic ETA issue silently, surfacing it as a product design constraint in a cross-functional review changed how engineering communicated the system's limitations and improved alignment across the team.</p></Reveal>
               </div>
             </div>
           </section>

@@ -81,7 +81,7 @@ function Img({
 function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
     <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">
-      {num} — {label}
+      {num}. {label}
     </p>
   );
 }
@@ -243,7 +243,7 @@ export default function GoTransitCaseStudy() {
               <Reveal delay={0.08}>
                 <blockquote className="mt-10 pl-6 border-l-2 border-accent space-y-4 text-[15px] font-light leading-[1.8] text-ink-soft italic max-w-[660px]">
                   <p>The instinct from the product team was upsell prompts. Surface GoRide after a KRL booking. Fast to ship. Reasonable.</p>
-                  <p>My read was different. Upsell mechanics work when users understand the product and need a nudge. They don't work when users have already decided what the product is for — and decided wrong.</p>
+                  <p>My read was different. Upsell mechanics work when users understand the product and need a nudge. They don't work when users have already decided what the product is for. And decided wrong.</p>
                 </blockquote>
               </Reveal>
             </div>
@@ -276,7 +276,7 @@ export default function GoTransitCaseStudy() {
 
               <Reveal delay={0.1}>
                 <div className="max-w-[660px] space-y-4 text-[15px] font-light leading-[1.8] text-ink-soft mb-10">
-                  <p>An <strong className="font-semibold text-ink">87% drop</strong> before users even entered the flow — and <strong className="font-semibold text-accent">42% of all bookings were middle-mile only.</strong></p>
+                  <p>An <strong className="font-semibold text-ink">87% drop</strong> before users even entered the flow. <strong className="font-semibold text-accent">42% of all bookings were middle-mile only.</strong></p>
                   <p>On paper this looked like a discoverability problem. Make the button bigger. Add a nudge. Ship a banner. That would have been the wrong diagnosis entirely.</p>
                 </div>
               </Reveal>
@@ -321,7 +321,7 @@ export default function GoTransitCaseStudy() {
 
               <Reveal delay={0.05}>
                 <p className="text-[14px] font-light text-ink-soft mb-8 max-w-[660px]">
-                  These were hypotheses, not conclusions. We needed to go find out whether real users experienced what we thought they were experiencing — and whether we were even asking the right questions.
+                  These were hypotheses, not conclusions. We needed to go find out whether real users experienced what we thought they were experiencing, and whether we were even asking the right questions.
                 </p>
               </Reveal>
             </div>
@@ -363,7 +363,7 @@ export default function GoTransitCaseStudy() {
                   <div className="space-y-3">
                     <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium">Observation 02</p>
                     <h4 className="font-sans text-[15px] font-semibold text-ink leading-[1.4]">Users had fixed mental models about what each app was for.</h4>
-                    <p className="text-[13px] font-light leading-[1.8] text-ink-soft">Gojek was for rides. GoTransit was for train tickets. Not journeys. Not planning. Tickets. The UI was not creating this belief. It was confirming one that already existed — and cementing it deeper with every visit.</p>
+                    <p className="text-[13px] font-light leading-[1.8] text-ink-soft">Gojek was for rides. GoTransit was for train tickets. Not journeys. Not planning. Tickets. The UI was not creating this belief. It was confirming one that already existed, cementing it deeper with every visit.</p>
                   </div>
                 </div>
               </Reveal>
@@ -420,7 +420,7 @@ export default function GoTransitCaseStudy() {
                 </h2>
                 <div className="space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px]">
                   <p>When we brought our findings back and proposed redesigning the homepage, we hit a wall.</p>
-                  <p>GoTransit was a new product. Engineering was conservative — any significant change touched a legacy search system shared across Gojek's booking flows. Product leadership questioned the investment.</p>
+                  <p>GoTransit was a new product. Engineering was conservative. Any significant change touched a legacy search system shared across Gojek's booking flows. Product leadership questioned the investment.</p>
                   <p>The honest answer was: this was exactly the moment to fix it. Mental models cement early. If we didn't fix this now, we would spend years fighting a perception we had let harden.</p>
                   <p>But conviction doesn't move roadmaps. Strategy does.</p>
                 </div>
@@ -440,8 +440,8 @@ export default function GoTransitCaseStudy() {
 
               <Reveal delay={0.08}>
                 <div className="space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-10 max-w-[660px]">
-                  <p>So I built a <strong className="font-semibold text-ink">2-year design vision for GoTransit.</strong> Not a mood board, but a phased roadmap with timelines — explicitly connected to the path toward 900K multimodal bookings.</p>
-                  <p>I presented this to product leadership, the engineering lead, and the VP of Design. The goal was not approval for everything. It was to show we had a coherent theory — that this was not a designer wanting to redraw screens, but a team with a clear strategy for how design could close the gap to 900K.</p>
+                  <p>So I built a <strong className="font-semibold text-ink">2-year design vision for GoTransit.</strong> Not a mood board, but a phased roadmap with timelines, explicitly connected to the path toward 900K multimodal bookings.</p>
+                  <p>I presented this to product leadership, the engineering lead, and the VP of Design. The goal was not approval for everything. It was to show we had a coherent theory: this was not a designer wanting to redraw screens, but a team with a clear strategy for how design could close the gap to 900K.</p>
                 </div>
               </Reveal>
 
@@ -452,7 +452,7 @@ export default function GoTransitCaseStudy() {
               <Reveal delay={0.06}>
                 <div className="bg-paper-warm border-l-4 border-accent px-7 py-6 max-w-[660px] mb-7">
                   <p className="font-sans text-[16px] font-semibold text-ink leading-[1.45]">
-                    Instead of "homepage revamp," we proposed "first-fold improvement" — just the search bar, masthead, and service grid. The slice users see before they scroll. The slice doing the most damage to perception.
+                    Instead of "homepage revamp," we proposed "first-fold improvement": just the search bar, masthead, and service grid. The slice users see before they scroll. The slice doing the most damage to perception.
                   </p>
                 </div>
               </Reveal>
@@ -515,7 +515,7 @@ export default function GoTransitCaseStudy() {
               <Reveal>
                 <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.6rem)] font-bold tracking-[-0.03em] mb-5 text-ink">Search Exploration</h3>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
-                  <p>The search bar was the first interactive element on the page. It was also doing the most damage — priming station lookup instead of journey planning.</p>
+                  <p>The search bar was the first interactive element on the page. It was also doing the most damage, priming station lookup instead of journey planning.</p>
                   <p>Our first instinct was to make search the hero. Two fields, clearly labelled. Where you are, where you're going. Auto-detect location. Make it feel like a journey planner, not a ticket counter.</p>
                   <p>We explored several directions in parallel:</p>
                 </div>
@@ -546,8 +546,8 @@ export default function GoTransitCaseStudy() {
               <Reveal delay={0.05}>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-7">
                   <p className="font-medium text-ink">Then we hit a constraint.</p>
-                  <p>Engineering flagged that the dual-field search required changes to a legacy system shared across Gojek's primary booking flow. Not a styling change — a significant backend decision, not scoped for Phase 1.</p>
-                  <p>We pushed back. We presented the user research. We showed that a single-field search, regardless of copy, would still read as station lookup in the existing page context — because it was structurally identical to what it replaced.</p>
+                  <p>Engineering flagged that the dual-field search required changes to a legacy system shared across Gojek's primary booking flow. Not a styling change. A significant backend decision, not scoped for Phase 1.</p>
+                  <p>We pushed back. We presented the user research. We showed that a single-field search, regardless of copy, would still read as station lookup in the existing page context, because it was structurally identical to what it replaced.</p>
                   <p className="font-semibold text-ink">Engineering came around. We aligned on the two-field search as the right architecture for communicating journey planning intent.</p>
                 </div>
               </Reveal>
@@ -567,7 +567,7 @@ export default function GoTransitCaseStudy() {
                 <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.6rem)] font-bold tracking-[-0.03em] mb-5 text-ink">The Masthead Problem</h3>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
                   <p>The original masthead: static banner, Gojek 2D illustration library, standard value props. Clean. On-brand. Forgettable. Featuring a train.</p>
-                  <p>The creative team, Hashir and Soozy, ran a benchmarking exercise across transit apps globally — Citymapper, Transit, Moovit, regional Southeast Asian players. What came back: almost every competitor defaulted to iconography and feature lists in the hero space. Almost nobody was telling a story.</p>
+                  <p>The creative team, Hashir and Soozy, ran a benchmarking exercise across transit apps globally: Citymapper, Transit, Moovit, regional Southeast Asian players. What came back: almost every competitor defaulted to iconography and feature lists in the hero space. Almost nobody was telling a story.</p>
                   <p>That was the opening.</p>
                 </div>
               </Reveal>
@@ -583,7 +583,7 @@ export default function GoTransitCaseStudy() {
               <Reveal delay={0.06}>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
                   <p>Our conviction: the masthead needed to narrate the actual GoTransit experience. Not list benefits. Tell the story of the journey in sequence, the way it actually happens.</p>
-                  <p>We pushed for a <strong className="font-semibold text-ink">horizontal scrolling narrative carousel</strong> — not auto-rotating, but inviting the user to move through moments:</p>
+                  <p>We pushed for a <strong className="font-semibold text-ink">horizontal scrolling narrative carousel</strong>, not auto-rotating, but inviting the user to move through moments:</p>
                 </div>
                 <div className="pl-7 border-l-2 border-border max-w-[500px] space-y-4 mb-10">
                   {[
@@ -609,11 +609,11 @@ export default function GoTransitCaseStudy() {
               <Reveal>
                 <SectionLabel num="06" label="Testing" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[560px]">
-                  Testing — What Broke, What We Fixed
+                  Testing: What Broke, What We Fixed
                 </h2>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
-                  <p>With designs converged, we moved into structured prototype testing — two rounds, with deliberate changes between them.</p>
-                  <p>We wanted to understand something specific beyond the UI: <strong className="font-semibold text-ink">do users naturally think in legs?</strong> When someone opens GoTransit, are they thinking about the full journey — or one leg at a time?</p>
+                  <p>With designs converged, we moved into structured prototype testing across two rounds, with deliberate changes between them.</p>
+                  <p>We wanted to understand something specific beyond the UI: <strong className="font-semibold text-ink">do users naturally think in legs?</strong> When someone opens GoTransit, are they thinking about the full journey, or one leg at a time?</p>
                   <p>So we recruited across two distinct contexts:</p>
                 </div>
               </Reveal>
@@ -638,10 +638,10 @@ export default function GoTransitCaseStudy() {
 
               {/* Round 1 */}
               <Reveal>
-                <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Round 1 — Testing Core Hypotheses</h3>
+                <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Round 1: Testing Core Hypotheses</h3>
                 <p className="text-[14px] font-light text-ink-soft mb-4">12 participants split across context and usage profile:</p>
                 <div className="flex flex-wrap gap-2 mb-8">
-                  {['3 users at / near a KRL station', '3 users at home or office', '3 KRL regulars — never tried multimodal', '3 users — booked multimodal at least once'].map((p) => (
+                  {['3 users at / near a KRL station', '3 users at home or office', '3 KRL regulars, never tried multimodal', '3 users, booked multimodal at least once'].map((p) => (
                     <span key={p} className="text-[10px] tracking-[0.05em] border border-border px-3 py-1.5 text-ink-soft">{p}</span>
                   ))}
                 </div>
@@ -660,10 +660,10 @@ export default function GoTransitCaseStudy() {
 
               <div className="space-y-0 mb-14">
                 {[
-                  { head: 'On mental model', body: 'The shift was happening but unevenly. 8 of 12 participants described the new search as "booking a trip" rather than "finding a station." Meaningful progress over baseline — but users near the station defaulted faster to single-leg behavior. They were already committed to the train leg. The homepage had a narrow window.' },
+                  { head: 'On mental model', body: 'The shift was happening but unevenly. 8 of 12 participants described the new search as "booking a trip" rather than "finding a station." Meaningful progress over baseline, but users near the station defaulted faster to single-leg behavior. They were already committed to the train leg. The homepage had a narrow window.' },
                   { head: 'On leg-booking behavior', body: 'Users at home or planning ahead were significantly more open to booking two or three legs. Users near the station almost universally booked one leg at a time. The environment was shaping cognition as much as the interface was.' },
-                  { head: 'On the masthead', body: 'It was not reading as a sequence. 6 of 12 users consumed the carousel frames as independent illustrations — they appreciated the visual quality but missed the narrative arc connecting them. The story we had worked hard to tell was not landing as a story.' },
-                  { head: 'On the search', body: 'The two-field structure created an unexpected question — "Does it know where I am, or do I type it?" — that the original single-field search never triggered. A new friction point we had introduced ourselves.' },
+                  { head: 'On the masthead', body: 'It was not reading as a sequence. 6 of 12 users consumed the carousel frames as independent illustrations; they appreciated the visual quality but missed the narrative arc connecting them. The story we had worked hard to tell was not landing as a story.' },
+                  { head: 'On the search', body: 'The two-field structure created an unexpected question ("Does it know where I am, or do I type it?") that the original single-field search never triggered. A new friction point we had introduced ourselves.' },
                 ].map(({ head, body }, i) => (
                   <Reveal key={head} delay={i * 0.05}>
                     <div className="border-t border-border py-6">
@@ -679,7 +679,7 @@ export default function GoTransitCaseStudy() {
               </Reveal>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
                 {[
-                  { label: 'Search field location state', body: 'Added a location-detect indicator to the first field — a pulsing state showing "Your current location." It answered the question before it became friction.' },
+                  { label: 'Search field location state', body: 'Added a location-detect indicator to the first field, a pulsing state showing "Your current location." It answered the question before it became friction.' },
                   { label: 'Masthead: from 2D to 3D illustration', body: 'The Round 1 feedback pointed at something deeper than narrative structure. The standard Gojek 2D library was not visually distinct enough to hold attention. The frames were blending into the green homepage.' },
                 ].map(({ label, body }, i) => (
                   <Reveal key={label} delay={i * 0.06}>
@@ -693,7 +693,7 @@ export default function GoTransitCaseStudy() {
 
               <Reveal delay={0.05}>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
-                  <p>We made the call to push toward monochromatic 3D illustration. More sculptural, more tactile, a visual language that felt elevated — genuinely fresh within Gojek's broader design system.</p>
+                  <p>We made the call to push toward monochromatic 3D illustration. More sculptural, more tactile, a visual language that felt elevated, genuinely fresh within Gojek's broader design system.</p>
                   <p>I pushed the creative team hard on this. There were rounds where the colour sat too heavy against the page. Rounds where characters felt stiff. Rounds where contrast was wrong and the frames weren't reading as connected.</p>
                 </div>
               </Reveal>
@@ -704,7 +704,7 @@ export default function GoTransitCaseStudy() {
 
               {/* Round 2 */}
               <Reveal>
-                <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-3 text-ink">Round 2 — Validating Changes, Testing Copy Variants</h3>
+                <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-3 text-ink">Round 2: Validating Changes, Testing Copy Variants</h3>
                 <p className="text-[14px] font-light text-ink-soft mb-6">10 participants. 5 returning from Round 1 to measure mental model shift, 5 new as a fresh signal. Same context split.</p>
               </Reveal>
 
@@ -714,8 +714,8 @@ export default function GoTransitCaseStudy() {
 
               <div className="space-y-0">
                 {[
-                  { head: 'The 3D masthead was working', body: '9 of 10 participants described the carousel as showing "steps" or "a journey" — up from 6 of 12 in Round 1. The visual elevation was doing more than aesthetic work: it was slowing users down enough to actually read the sequence.' },
-                  { head: 'The station-context pattern held', body: 'Users near stations still defaulted to single-leg booking regardless of which variant they saw. This confirmed our Round 1 hypothesis — the homepage redesign was the right lever for the planning mindset, not the in-motion user. We documented this clearly as input for Phase 2.' },
+                  { head: 'The 3D masthead was working', body: '9 of 10 participants described the carousel as showing "steps" or "a journey", up from 6 of 12 in Round 1. The visual elevation was doing more than aesthetic work: it was slowing users down enough to actually read the sequence.' },
+                  { head: 'The station-context pattern held', body: 'Users near stations still defaulted to single-leg booking regardless of which variant they saw. This confirmed our Round 1 hypothesis: the homepage redesign was the right lever for the planning mindset, not the in-motion user. We documented this clearly as input for Phase 2.' },
                 ].map(({ head, body }, i) => (
                   <Reveal key={head} delay={i * 0.06}>
                     <div className="border-t border-border py-6">
@@ -734,7 +734,7 @@ export default function GoTransitCaseStudy() {
               <Reveal>
                 <SectionLabel num="07" label="Shipped" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-2 text-ink">What Shipped</h2>
-                <p className="text-[13px] font-light text-ink-muted mb-10">Phase 1 — the new first fold</p>
+                <p className="text-[13px] font-light text-ink-muted mb-10">Phase 1: the new first fold</p>
               </Reveal>
 
               <Reveal delay={0.04}>
@@ -767,7 +767,7 @@ export default function GoTransitCaseStudy() {
                   The Unsolved Problem
                 </h2>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-10">
-                  <p>The near-station user remains a fundamentally different cognitive state. First mile is done. They're at the platform in execution mode — time, platform, tap, go. Cognitive bandwidth is narrow. The homepage redesign could not reach them.</p>
+                  <p>The near-station user remains a fundamentally different cognitive state. First mile is done. They're at the platform in execution mode: time, platform, tap, go. Cognitive bandwidth is narrow. The homepage redesign could not reach them.</p>
                   <p>That population needed a different intervention, further into the booking flow or in the post-booking experience. We documented three directions for Phase 2:</p>
                 </div>
               </Reveal>
@@ -801,7 +801,7 @@ export default function GoTransitCaseStudy() {
 
               <div className="mb-8">
                 {[
-                  { val: '+48%', head: 'CTR on the multimodal search bar', body: "Users who previously ignored the multimodal entry point were clicking in. The reframed search, the narrative masthead, the identity shift — something in that combination moved the first interaction significantly." },
+                  { val: '+48%', head: 'CTR on the multimodal search bar', body: "Users who previously ignored the multimodal entry point were clicking in. The reframed search, the narrative masthead, the identity shift. Something in that combination moved the first interaction significantly." },
                   { val: '+12%', head: 'Conversion to multimodal booking', body: 'The signal travelled all the way through the funnel. Users entering the search flow were converting to completed multimodal bookings at a meaningfully higher rate. Perception change was translating into behavior change.' },
                   { val: '−3.5%', head: 'Individual ticket booking conversion', body: "This one looks like a regression. It isn't. Users who previously came to buy a train ticket were now entering the multimodal flow instead. They were being redirected from a low-margin behavior to a higher-margin one. That decline was the behavioral shift we designed for." },
                 ].map(({ val, head, body }, i) => (
@@ -819,7 +819,7 @@ export default function GoTransitCaseStudy() {
 
               <Reveal delay={0.1}>
                 <p className="text-[11px] font-light text-ink-muted italic max-w-[600px] border-t border-border pt-5 mb-12">
-                  iOS results following Phase 1 launch. No formal A/B test was run. Other product changes were running in parallel — these numbers are directional, not causally attributed to the redesign alone.
+                  iOS results following Phase 1 launch. No formal A/B test was run. Other product changes were running in parallel, so these numbers are directional, not causally attributed to the redesign alone.
                 </p>
               </Reveal>
 
@@ -843,7 +843,7 @@ export default function GoTransitCaseStudy() {
                 <Reveal><p>The decisions that mattered most in this project happened before I opened Figma.</p></Reveal>
                 <Reveal delay={0.04}><p>Correctly reading the 87% drop as a comprehension failure, not a conversion problem. Pushing design into an OKR conversation that was heading toward upsell prompts. Building the organizational alignment for a phased strategy when the easier path was to ship a banner. Knowing when to push back on engineering constraints and when to hold the line.</p></Reveal>
                 <Reveal delay={0.06}><p>A lead-level contribution is not measured in beautiful screens. It is measured in whether you diagnosed the right problem, built the conditions for the right solution to reach users, and left something the team could build on after you moved on.</p></Reveal>
-                <Reveal delay={0.08}><p>But what I'm most proud of is not the 48% CTR uplift. It's the vision document — the thing that gave a new, under-resourced product a design strategy it could actually grow into.</p></Reveal>
+                <Reveal delay={0.08}><p>But what I'm most proud of is not the 48% CTR uplift. It's the vision document, the thing that gave a new, under-resourced product a design strategy it could actually grow into.</p></Reveal>
               </div>
 
               <Reveal delay={0.12}>

@@ -58,7 +58,7 @@ export default function Hero() {
           <img
             src="/images/IMG_1417.jpg"
             alt="Nadeem Portrait"
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </motion.div>
       </div>

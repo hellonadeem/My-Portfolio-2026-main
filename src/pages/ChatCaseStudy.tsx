@@ -35,7 +35,7 @@ function Reveal({
 function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
     <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">
-      {num} — {label}
+      {num}. {label}
     </p>
   );
 }
@@ -45,7 +45,7 @@ const FEATURES = [
     num: '01',
     name: 'Internet Calling',
     type: 'Connectivity',
-    desc: 'In-app voice calls between drivers and customers — replacing phone number exposure with a privacy-preserving, data-based calling layer built directly into the order flow.',
+    desc: 'In-app voice calls between drivers and customers, replacing phone number exposure with a privacy-preserving, data-based calling layer built directly into the order flow.',
   },
   {
     num: '02',
@@ -57,13 +57,13 @@ const FEATURES = [
     num: '03',
     name: 'Auto Response Templates',
     type: 'Communication Speed',
-    desc: 'Pre-set message templates for common driver-to-customer moments — arriving, running late, can\'t find location. Reduced typing friction for drivers and improved response times during active orders.',
+    desc: 'Pre-set message templates for common driver-to-customer moments: arriving, running late, can\'t find location. Reduced typing friction for drivers and improved response times during active orders.',
   },
   {
     num: '04',
     name: 'Help Ticket',
     type: 'Support Integration',
-    desc: 'Integrated in-app support ticket creation within the chat surface. Users could raise order issues without leaving the conversation context — reducing support handling time and duplicate contact volume.',
+    desc: 'Integrated in-app support ticket creation within the chat surface. Users could raise order issues without leaving the conversation context, reducing support handling time and duplicate contact volume.',
   },
 ];
 
@@ -188,13 +188,13 @@ export default function ChatCaseStudy() {
 
               <div className="space-y-5 text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px]">
                 <Reveal>
-                  <p>Before GoChat, driver-to-customer communication was fragmented — phone calls that exposed personal numbers, no structured way to raise order issues, and no shared space where operational messages and support lived together.</p>
+                  <p>Before GoChat, driver-to-customer communication was fragmented: phone calls that exposed personal numbers, no structured way to raise order issues, and no shared space where operational messages and support lived together.</p>
                 </Reveal>
                 <Reveal delay={0.04}>
-                  <p>GoChat was built to consolidate all of it. A single in-app communication platform that handled order-related messaging, real-time coordination, and help — without pushing either party outside the Gojek ecosystem.</p>
+                  <p>GoChat was built to consolidate all of it. A single in-app communication platform that handled order-related messaging, real-time coordination, and help, without pushing either party outside the Gojek ecosystem.</p>
                 </Reveal>
                 <Reveal delay={0.06}>
-                  <p>For the business, the goal was twofold: improve the quality of order-related communication, and reduce the cost of support contact — by resolving more issues inside the product before they reached an agent.</p>
+                  <p>For the business, the goal was twofold: improve the quality of order-related communication, and reduce the cost of support contact by resolving more issues inside the product before they reached an agent.</p>
                 </Reveal>
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function ChatCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-12">
-                  GoChat's success was measured against two things — whether order-related communication improved (fewer failed pickups, faster driver-customer coordination) and whether bringing Help into the chat surface deflected inbound support volume. Both tracks ran simultaneously across a two-year design cycle.
+                  GoChat's success was measured against two things: whether order-related communication improved (fewer failed pickups, faster driver-customer coordination) and whether bringing Help into the chat surface deflected inbound support volume. Both tracks ran simultaneously across a two-year design cycle.
                 </p>
               </Reveal>
 
@@ -271,10 +271,10 @@ export default function ChatCaseStudy() {
                 <div className="border border-border p-8 md:p-10">
                   <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-4">Individual feature case studies in progress</p>
                   <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[580px] mb-6">
-                    GoChat is a platform — each feature (Internet Calling, Tipping, Auto Response, Help Ticket) has its own research, design decisions, and experiment results. The individual write-ups are being prepared separately.
+                    GoChat is a platform. Each feature (Internet Calling, Tipping, Auto Response, Help Ticket) has its own research, design decisions, and experiment results. The individual write-ups are being prepared separately.
                   </p>
                   <p className="text-[15px] font-light leading-[1.8] text-ink-soft max-w-[580px]">
-                    Happy to walk through any of these in depth — the platform strategy, how the features were sequenced, and the trade-offs in designing for both the driver and customer sides simultaneously.
+                    Happy to walk through any of these in depth: the platform strategy, how the features were sequenced, and the trade-offs in designing for both the driver and customer sides simultaneously.
                   </p>
                 </div>
               </Reveal>

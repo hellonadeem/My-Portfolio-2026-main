@@ -35,7 +35,7 @@ function Reveal({
 function SectionLabel({ num, label }: { num: string; label: string }) {
   return (
     <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">
-      {num} — {label}
+      {num}. {label}
     </p>
   );
 }
@@ -118,7 +118,7 @@ export default function SnippetsCaseStudy() {
               </div>
 
               <h1 className="font-sans text-[clamp(28px,4.5vw,64px)] font-bold leading-[1.02] tracking-[-0.04em] text-ink max-w-[760px] mb-6">
-                Snippets — Gojek's In-App Stories Channel
+                Snippets: Gojek's In-App Stories Channel
               </h1>
 
               <p className="text-[14px] text-ink-soft font-light mb-14">
@@ -161,13 +161,13 @@ export default function SnippetsCaseStudy() {
 
               <div className="space-y-5 text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px]">
                 <Reveal>
-                  <p>Snippets is an in-app communication channel inside the Gojek super-app that adopts the Stories format — short-lived, highly visual, and neatly sequenced — to deliver content across the entire Gojek ecosystem without being tethered to a single product surface.</p>
+                  <p>Snippets is an in-app communication channel inside the Gojek super-app that adopts the Stories format — short-lived, highly visual, and neatly sequenced, to deliver content across the entire Gojek ecosystem without being tethered to a single product surface.</p>
                 </Reveal>
                 <Reveal delay={0.04}>
                   <p>The original brief was to replace Gojek's inbox — a static, low-engagement channel where all in-app communication sat. The inbox wasn't designed for the pace or richness of what Gojek needed to communicate: new feature launches, merchant promotions, order feedback, cross-sell moments, and more.</p>
                 </Reveal>
                 <Reveal delay={0.06}>
-                  <p>Snippets gave product groups — across GoFood, GoPay, GoMart, and Transport — a shared channel to tell visual stories, run interactive campaigns, and collect granular feedback, all without fragmenting the user experience across separate surfaces.</p>
+                  <p>Snippets gave product groups across GoFood, GoPay, GoMart, and Transport a shared channel to tell visual stories, run interactive campaigns, and collect granular feedback, all without fragmenting the user experience across separate surfaces.</p>
                 </Reveal>
               </div>
 
@@ -195,13 +195,13 @@ export default function SnippetsCaseStudy() {
                     phase: 'Phase 01',
                     year: '2022',
                     title: 'Stories as inbox replacement',
-                    body: 'Launched the core Snippets format — short-lived Stories with images, GIFs, and video. Replaced the static Gojek inbox as the primary in-app communication surface. Product groups could now sequence content into narratives rather than single notification cards.',
+                    body: 'Launched the core Snippets format: short-lived Stories with images, GIFs, and video. Replaced the static Gojek inbox as the primary in-app communication surface. Product groups could now sequence content into narratives rather than single notification cards.',
                   },
                   {
                     phase: 'Phase 02',
                     year: '2023',
                     title: 'Interactive campaigns & feedback loops',
-                    body: 'Introduced interactive components — polls, reactions, and granular feedback collection tied to recent orders. Product groups across GoFood, GoPay, and Transport began using Snippets for feature activation campaigns and user research at scale.',
+                    body: 'Introduced interactive components: polls, reactions, and granular feedback collection tied to recent orders. Product groups across GoFood, GoPay, and Transport began using Snippets for feature activation campaigns and user research at scale.',
                   },
                   {
                     phase: 'Phase 03',
@@ -213,7 +213,7 @@ export default function SnippetsCaseStudy() {
                     phase: 'Phase 04',
                     year: '2024',
                     title: 'Live stream & GoMart commerce',
-                    body: 'Scaled the format to live video and live stream shopping on GoMart. Cross-sell initiatives with GoTo partners brought Snippets into the commerce layer — turning a communication channel into a revenue and ad-generating surface used across the entire super-app.',
+                    body: 'Scaled the format to live video and live stream shopping on GoMart. Cross-sell initiatives with GoTo partners brought Snippets into the commerce layer — turning a communication channel into a revenue and ad-generating surface across the entire super-app.',
                   },
                 ].map(({ phase, year, title, body }, i) => (
                   <Reveal key={phase} delay={i * 0.06}>
@@ -252,7 +252,7 @@ export default function SnippetsCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-12">
-                  Snippets grew from a single team experiment into a shared platform used across GoFood, GoPay, GoMart, and Transport. By the time Video launched inside the format, it was generating real commerce outcomes — not just impressions. The numbers below are from Milestone 2, the GoFood Video experiment run across Jabodetabek.
+                  Snippets grew from a single team experiment into a shared platform used across GoFood, GoPay, GoMart, and Transport. By the time Video launched inside the format, it was generating real commerce outcomes, not just impressions. The numbers below are from Milestone 2, the GoFood Video experiment run across Jabodetabek.
                 </p>
               </Reveal>
 
@@ -275,7 +275,7 @@ export default function SnippetsCaseStudy() {
 
               <Reveal delay={0.08}>
                 <p className="text-[14px] font-light leading-[1.8] text-ink-soft max-w-[660px] mb-12">
-                  Hard churn re-engagement — users who had stopped ordering — showed the clearest signal: <span className="text-ink font-medium">+2.2% session conversion on Android</span>, +1.1% on iOS. A format originally built for communication was pulling dormant users back into the funnel.
+                  Hard churn re-engagement (users who had stopped ordering) showed the clearest signal: <span className="text-ink font-medium">+2.2% session conversion on Android</span>, +1.1% on iOS. A format originally built for communication was pulling dormant users back into the funnel.
                 </p>
               </Reveal>
             </div>
@@ -288,10 +288,10 @@ export default function SnippetsCaseStudy() {
                 <div className="border border-border p-8 md:p-10">
                   <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-4">Full case study in progress</p>
                   <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[580px] mb-6">
-                    This project spans two years of design work across multiple product surfaces — the detailed write-up including research, design decisions, experiment results, and visual explorations is being prepared.
+                    This project spans two years of design work across multiple product surfaces — the detailed write-up covering research, design decisions, experiment results, and visual explorations is being prepared.
                   </p>
                   <p className="text-[15px] font-light leading-[1.8] text-ink-soft max-w-[580px]">
-                    Happy to walk through Snippets in depth during a conversation — including the zero-to-one process, how the format evolved, and the trade-offs made at each phase.
+                    Happy to walk through Snippets in depth during a conversation, including the zero-to-one process, how the format evolved, and the trade-offs made at each phase.
                   </p>
                 </div>
               </Reveal>
