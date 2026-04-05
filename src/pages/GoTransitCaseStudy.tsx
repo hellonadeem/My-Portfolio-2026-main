@@ -206,7 +206,7 @@ export default function GoTransitCaseStudy() {
           <section className="pt-12 pb-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">01</p>
+                <SectionLabel num="01" label="Context" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-10 text-ink max-w-[600px]">
                   The Feature Nobody Used
                 </h2>
@@ -227,7 +227,6 @@ export default function GoTransitCaseStudy() {
           <section className="pt-16 pb-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <p className="text-[11px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-5">02</p>
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-10 text-ink max-w-[600px]">
                   Why This Mattered
                 </h2>
@@ -253,7 +252,7 @@ export default function GoTransitCaseStudy() {
           <section id="sec-research" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="03" label="Research" />
+                <SectionLabel num="02" label="Research" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-12 text-ink max-w-[520px]">
                   The Funnel Told Us Where to Look
                 </h2>
@@ -414,7 +413,7 @@ export default function GoTransitCaseStudy() {
           <section id="sec-strategy" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="04" label="Strategy" />
+                <SectionLabel num="03" label="Strategy" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-8 text-ink max-w-[600px]">
                   Alignment: The hardest design work wasn't in Figma
                 </h2>
@@ -469,7 +468,7 @@ export default function GoTransitCaseStudy() {
           <section id="sec-design" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="05" label="Design" />
+                <SectionLabel num="04" label="Design" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[520px]">
                   Diverging Hard
                 </h2>
@@ -591,6 +590,7 @@ export default function GoTransitCaseStudy() {
                     'Frame 2: A GoRide picks you up.',
                     'Frame 3: You tap your QR at the station gate.',
                     "Frame 4: You're on the train. Another GoRide is waiting at the other end.",
+                    "Frame 5: You've arrived. Door to door, one order.",
                   ].map((frame, i) => (
                     <p key={i} className="font-serif text-[16px] italic text-ink-soft leading-[1.6]">{frame}</p>
                   ))}
@@ -607,7 +607,7 @@ export default function GoTransitCaseStudy() {
           <section id="sec-testing" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="06" label="Testing" />
+                <SectionLabel num="05" label="Testing" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[560px]">
                   Testing: What Broke, What We Fixed
                 </h2>
@@ -694,7 +694,7 @@ export default function GoTransitCaseStudy() {
               <Reveal delay={0.05}>
                 <div className="max-w-[660px] space-y-4 text-[16px] font-light leading-[1.85] text-ink-soft mb-8">
                   <p>We made the call to push toward monochromatic 3D illustration. More sculptural, more tactile, a visual language that felt elevated, genuinely fresh within Gojek's broader design system.</p>
-                  <p>I pushed the creative team hard on this. There were rounds where the colour sat too heavy against the page. Rounds where characters felt stiff. Rounds where contrast was wrong and the frames weren't reading as connected.</p>
+                  <p>I pushed the creative team hard on this. There were rounds where the color sat too heavy against the page. Rounds where characters felt stiff. Rounds where contrast was wrong and the frames weren't reading as connected.</p>
                 </div>
               </Reveal>
 
@@ -732,7 +732,7 @@ export default function GoTransitCaseStudy() {
           <section id="sec-impact" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="07" label="Shipped" />
+                <SectionLabel num="06" label="Shipped" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-2 text-ink">What Shipped</h2>
                 <p className="text-[13px] font-light text-ink-muted mb-10">Phase 1: the new first fold</p>
               </Reveal>
@@ -774,7 +774,7 @@ export default function GoTransitCaseStudy() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
-                  { label: 'Destination-triggered last mile prompt', desc: "When a near-station user enters their destination, surface a single contextual line before they confirm: \"GoRide from [arrival station] — usually available in 3 mins.\" No modal. No extra screen." },
+                  { label: 'Destination-triggered last mile prompt', desc: "When a near-station user enters their destination, surface a single contextual line before they confirm: \"GoRide from [arrival station], usually available in 3 mins.\" No modal. No extra screen." },
                   { label: 'Flip the default on results', desc: 'Rather than presenting KRL-only as the top result, show the two-leg option as the recommended result with a clear time and cost breakdown.' },
                   { label: 'Arrival anticipation during journey', desc: "Once the user is on the train, surface a nudge as they approach their destination: \"Arriving in ~8 mins. Add a GoRide for the last mile?\" Cognitive bandwidth is back. The ask feels helpful." },
                 ].map(({ label, desc }, i) => (
@@ -793,7 +793,7 @@ export default function GoTransitCaseStudy() {
           <section className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="08" label="Impact" />
+                <SectionLabel num="07" label="Impact" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-12 text-ink">
                   What the Numbers Said
                 </h2>
@@ -833,7 +833,7 @@ export default function GoTransitCaseStudy() {
           <section className="py-24 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="09" label="Reflection" />
+                <SectionLabel num="08" label="Reflection" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-12 text-ink">
                   What I Learned
                 </h2>
