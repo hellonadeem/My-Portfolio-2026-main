@@ -863,7 +863,7 @@ export default function GoTransitCaseStudy() {
               <div>
                 <div className="text-[11px] font-medium tracking-[0.12em] uppercase text-ink-muted mb-2">Next case study</div>
                 <div className="font-sans text-[22px] font-bold tracking-[-0.03em] text-ink group-hover:text-accent transition-colors">
-                  Agoda Design System
+                  GoCar CADF
                 </div>
               </div>
               <span className="text-[28px] text-ink-muted group-hover:translate-x-1.5 group-hover:text-accent transition-all duration-200">→</span>

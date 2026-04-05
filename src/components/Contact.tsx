@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Heart, Copy, Check } from 'lucide-react';
+import { Coffee, Copy, Check } from 'lucide-react';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -139,7 +139,7 @@ export default function Contact() {
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <Heart className="w-8 h-8 text-accent fill-accent/10" strokeWidth={1.2} />
+                    <Coffee className="w-8 h-8 text-accent fill-accent/10" strokeWidth={1.2} />
                   </motion.div>
                 </div>
               </motion.div>

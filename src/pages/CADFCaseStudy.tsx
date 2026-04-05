@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 const NAV_ITEMS = [
   { label: 'Overview',    id: 'sec-overview'    },
   { label: 'Illuminate',  id: 'sec-research'    },
-  { label: 'Archetypes',  id: 'sec-archetypes'  },
+  { label: 'Key Insights', id: 'sec-archetypes'  },
   { label: 'Design',      id: 'sec-design'      },
   { label: 'Experiments', id: 'sec-experiments' },
   { label: 'Impact',      id: 'sec-impact'      },
@@ -151,13 +151,13 @@ export default function CADFCaseStudy() {
                 ))}
               </div>
 
-              <h1 className="font-sans text-[clamp(28px,4.5vw,64px)] font-bold leading-[1.02] tracking-[-0.04em] text-ink max-w-[760px] mb-6">
+              <h1 className="font-sans text-[clamp(28px,4.5vw,64px)] font-bold leading-[1.02] tracking-[-0.04em] text-ink max-w-[760px] mb-3">
                 Reduce Cancellation from 25% to 16% in Bali
               </h1>
 
-              <p className="text-[14px] text-ink-soft font-light mb-14">
-                Mohd Nadeem&nbsp;·&nbsp;Gojek&nbsp;·&nbsp;2023
-              </p>
+              <h3 className="font-sans text-[clamp(14px,1.4vw,18px)] font-normal tracking-[-0.01em] text-ink-muted mb-14">
+                Cancellation After Driver Found (CADF)
+              </h3>
             </div>
           </section>
 
@@ -178,7 +178,7 @@ export default function CADFCaseStudy() {
               </div>
               <div>
                 <p className="text-[10px] font-medium tracking-[0.1em] uppercase text-ink-muted mb-1.5">Timeline</p>
-                <p className="text-[13px] text-ink font-light">~3 Months · 2023</p>
+                <p className="text-[13px] text-ink font-light">4 Weeks · 2024–25</p>
               </div>
             </div>
           </section>
@@ -215,7 +215,7 @@ export default function CADFCaseStudy() {
               </Reveal>
 
               <div className="space-y-5 text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px]">
-                <Reveal><p>A CADF event isn't an abandoned search. It's a completed match that failed at the last mile. The driver has accepted, routing has begun, supply has been allocated. The cancellation wastes driver time, reduces their earnings-per-hour, and re-enters the customer into the queue, often at a higher ETA than before.</p></Reveal>
+                <Reveal><p>A CADF event isn't an abandoned search. It's a completed match that failed after the driver was already assigned. The driver has accepted, routing has begun, supply has been allocated. The cancellation wastes driver time, reduces their earnings-per-hour, and re-enters the customer into the queue, often at a higher ETA than before.</p></Reveal>
                 <Reveal delay={0.04}><p>Over time, repeated CADF experiences erode trust in GoCar's reliability.</p></Reveal>
               </div>
             </div>
@@ -232,7 +232,7 @@ export default function CADFCaseStudy() {
               </Reveal>
               <div className="space-y-0 max-w-[660px]">
                 {[
-                  { label: 'Ownership', body: 'As lead designer, I owned the full arc from problem definition to shipped solution.' },
+                  { label: 'Ownership', body: 'Led the project from problem definition to shipped solution.' },
                   { label: 'Data', body: 'Partnered with the data team to segment cancellation logs before any design work began.' },
                   { label: 'Engineering', body: 'Worked closely with ML and engineering to understand how the dispatch system works.' },
                   { label: 'Research', body: 'Collaborated with UX research to validate early hypotheses and anecdotal feedback.' },
@@ -266,8 +266,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.04}>
                 <blockquote className="pl-6 border-l-2 border-accent space-y-3 text-[15px] font-light leading-[1.8] text-ink-soft mb-10 max-w-[660px]">
-                  <p>We looked at quantitative insights on cancelled orders to understand why riders cancel.</p>
-                  <p>The signals were then vetted through qualitative research to plan the approach.</p>
+                  <p>We started with cancellation reason data to understand what riders were selecting when they cancelled. The numbers pointed to patterns. We then ran qualitative research with riders and drivers to understand the anxiety behind each one.</p>
                 </blockquote>
               </Reveal>
 
@@ -308,9 +307,12 @@ export default function CADFCaseStudy() {
               </Reveal>
 
               <Reveal delay={0.06}>
-                <p className="text-[13px] font-light text-ink-soft mb-16 max-w-[660px] pt-3 border-t border-border">
-                  <span className="font-semibold text-ink">Insight: </span>Cancellation risk spiked in the first 60 sec after driver assignment, before the customer saw any movement.
-                </p>
+                <div className="mb-16 max-w-[660px]">
+                  <div className="flex items-start gap-3 bg-accent/[0.06] border-l-2 border-accent px-4 py-3">
+                    <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-accent mt-0.5 shrink-0">Data Point</span>
+                    <p className="text-[13px] font-light text-ink-soft leading-[1.7]">Cancellation risk spiked in the first 60 sec after driver assignment, before the customer saw any movement.</p>
+                  </div>
+                </div>
               </Reveal>
 
               {/* — Key quotes — */}
@@ -318,10 +320,10 @@ export default function CADFCaseStudy() {
                 <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-2 text-ink">
                   What drivers and riders told us.
                 </h3>
-                <p className="text-[14px] font-light text-ink-muted mb-8">We collaborated with research to gather driver and customer voices.</p>
+                <p className="text-[14px] font-light text-ink-muted mb-8">Qualitative inputs from rider and driver research sessions.</p>
               </Reveal>
 
-              <div className="space-y-5 mb-6">
+              <div className="space-y-5 mb-10">
                 {[
                   { quote: "If they don't reply to my first message I know they're going to cancel. I always message first now, early, before they have a chance to worry.", role: 'Driver' },
                   { quote: "If the driver is far I just cancel and rebook. Usually you get someone better the second time.", role: 'Rider' },
@@ -336,6 +338,12 @@ export default function CADFCaseStudy() {
                 ))}
               </div>
 
+              <Reveal delay={0.08}>
+                <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[660px] border-t border-border pt-6">
+                  The quant told us <span className="font-semibold text-ink">what</span> users were doing. The qual told us <span className="font-semibold text-ink">why</span>. Together, they pointed to something the raw numbers alone couldn't show: these weren't the same user cancelling for the same reason.
+                </p>
+              </Reveal>
+
             </div>
           </section>
 
@@ -343,7 +351,7 @@ export default function CADFCaseStudy() {
           <section id="sec-archetypes" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <SectionLabel num="03" label="Archetypes" />
+                <SectionLabel num="03" label="Key Insights" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[600px]">
                   Not one problem. Three fundamentally different users.
                 </h2>
@@ -351,7 +359,7 @@ export default function CADFCaseStudy() {
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-12">
-                  Cancellation reason data allowed segmentation into three psychologically distinct archetypes, each requiring a fundamentally different design response. This framing became the shared language across product, engineering, and data discussions.
+                  Combining cancellation reason data with driver and rider voices, we identified three distinct behavioural patterns. Not variations of the same problem. Three different anxieties, each requiring a different design response.
                 </p>
               </Reveal>
 
@@ -361,15 +369,15 @@ export default function CADFCaseStudy() {
                     num: '01',
                     name: 'Driver not moving',
                     signal: '"Driver too far" · "Not moving"',
-                    pct: '~20% of CADF',
-                    insight: 'Does not want to cancel. Wants to feel safe waiting. Needs reassurance, progress signals, and context.',
+                    pct: '~29% of CADF reasons',
+                    insight: 'Does not want to cancel. Wants to feel safe waiting. Needs context, not just an ETA.',
                   },
                   {
                     num: '02',
                     name: 'Waited too long',
                     signal: '"Waited too long"',
-                    pct: '19.1% of CADF reasons',
-                    insight: 'Has already passed their tolerance threshold. Needs earlier intervention, not friction after frustration peaks.',
+                    pct: '25.1% of CADF reasons',
+                    insight: 'Frustration has already peaked by the time they cancel. Needs earlier intervention, before they reach that point.',
                   },
                   {
                     num: '03',
@@ -400,21 +408,16 @@ export default function CADFCaseStudy() {
               <Reveal>
                 <SectionLabel num="04" label="Design" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[600px]">
-                  A coordinated system across four touchpoints.
+                  Three anxieties. Four touchpoints. One system.
                 </h2>
               </Reveal>
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-10">
-                  The intervention was not a single screen redesign. It was a communication system spanning four distinct moments in the post-driver-assignment journey, each carrying a specific job tied to a specific archetype's anxiety.
+                  A single screen fix wouldn't move the metric. The hypothesis was a coordinated system of four touchpoints, each mapped to a specific archetype and moment in the post-assignment journey. Individual experiments were directional. The system is what moved the number.
                 </p>
               </Reveal>
 
-              <Reveal delay={0.06}>
-                <blockquote className="pl-6 border-l-2 border-accent text-[15px] font-light leading-[1.8] text-ink-soft italic max-w-[600px] mb-12">
-                  <p>Every touchpoint in the waiting experience should reduce uncertainty, not merely acknowledge it.</p>
-                </blockquote>
-              </Reveal>
 
               <div className="space-y-0 mb-12">
                 {[
@@ -432,9 +435,9 @@ export default function CADFCaseStudy() {
                   },
                   {
                     num: '03',
-                    title: 'Chat Layer & 3PM Messaging',
-                    broken: 'Chat buried two taps deep. No proactive communication from system during the wait.',
-                    opportunity: 'System-initiated nudge after threshold. One-tap auto-populated message reduces anxiety on both sides simultaneously.',
+                    title: 'Chat & Auto-Response Messaging',
+                    broken: 'Chat buried two taps deep. No proactive outreach during the wait.',
+                    opportunity: 'System-initiated nudge after a wait threshold. One-tap auto-populated message sent on behalf of the driver reduces anxiety on both sides.',
                   },
                   {
                     num: '04',
@@ -454,7 +457,7 @@ export default function CADFCaseStudy() {
                         <p className="text-[13px] font-light leading-[1.7] text-ink-soft">{broken}</p>
                       </div>
                       <div>
-                        <p className="text-[10px] tracking-[0.1em] uppercase text-ink-muted/60 font-medium mb-2">The intervention</p>
+                        <p className="text-[10px] tracking-[0.1em] uppercase text-ink-muted/60 font-medium mb-2">Hypothesis</p>
                         <p className="text-[13px] font-light leading-[1.7] text-ink-soft">{opportunity}</p>
                       </div>
                     </div>
@@ -475,13 +478,13 @@ export default function CADFCaseStudy() {
               <Reveal>
                 <SectionLabel num="05" label="Experiments" />
                 <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-5 text-ink max-w-[600px]">
-                  Testing in layers, not as a bundle.
+                  Each experiment built on the last.
                 </h2>
               </Reveal>
 
               <Reveal delay={0.04}>
                 <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px] mb-16">
-                  Each touchpoint was designed to be testable in isolation, so metric movement could be attributed to specific interventions rather than a bundled release.
+                  Touchpoints were tested sequentially. Each one was directional on its own. Combined as a system, they produced the metric movement that no single experiment could achieve in isolation.
                 </p>
               </Reveal>
 
@@ -489,31 +492,16 @@ export default function CADFCaseStudy() {
               <Reveal>
                 <div className="mb-16 pt-8 border-t border-border">
                   <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Experiment 01</p>
-                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-8 text-ink">Push Notification</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-3">Hypothesis</p>
-                      <p className="text-[14px] font-light leading-[1.75] text-ink-soft">Dynamic, ML-triggered PN themes will reduce cold-start anxiety and early CADF events in the first 120 seconds of driver assignment.</p>
-                    </div>
-                    <div className="space-y-5">
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Control</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Static PN template, same message regardless of driver distance, demand, or cold-start state.</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Treatment Variants</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft"><span className="font-medium text-ink">Urgency</span>: confirms pickup is happening. <span className="font-medium text-ink">Quality</span>: leads with driver trust signals. <span className="font-medium text-ink">Reliability</span>: cold-start, explains delay, invites action.</p>
-                      </div>
-                    </div>
-                  </div>
+                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Push Notification</h3>
+                  <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[600px] mb-6">An ML-triggered PN with context-aware copy will reduce cold-start anxiety in the first 120 seconds after driver assignment.</p>
                   <div className="inline-flex items-center gap-2 border border-border px-3 py-2 mb-8">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Primary Metric</span>
                     <span className="text-[12px] font-light text-ink-soft">Chat open rate in first 60 sec after assignment</span>
                   </div>
-                  <div className="mb-8"><Img label="Push notification — control vs variants (Urgency / Quality / Reliability)" /></div>
+                  <div className="mb-8"><img src="/images/transit/PNs.png" alt="Push notification — control vs variants (Urgency / Quality / Reliability)" className="w-full h-auto block" /></div>
                   <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
-                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Chat open rate remained low in the first two weeks, suggesting PN alone wasn't enough to drive engagement. Reassurance without friction does not convert the Rational Re-booker.</p>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Chat open rate didn't move in the first two weeks. PN alone wasn't enough. Reassurance at assignment doesn't hold a user who's already decided to cancel.</p>
                   </div>
                 </div>
               </Reveal>
@@ -522,75 +510,92 @@ export default function CADFCaseStudy() {
               <Reveal>
                 <div className="mb-16 pt-8 border-t border-border">
                   <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Experiment 02</p>
-                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-8 text-ink">Chat Entry Point</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-3">Hypothesis</p>
-                      <p className="text-[14px] font-light leading-[1.75] text-ink-soft">Surfacing real-time contextual signals on the OTW screen will reduce "driver not moving" and "driver too far" as a share of CADF reasons.</p>
-                    </div>
-                    <div className="space-y-5">
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Control</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">No preemptive nudge for customer to reply to driver within first 60 sec.</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Treatment</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Full-width prompt surfaced only when user signals cancel intent: high ETA or prior cancellation history detected.</p>
-                      </div>
-                    </div>
-                  </div>
+                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Chat Entry Point</h3>
+                  <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[600px] mb-6">A contextual chat nudge on the OTW screen will reduce "driver not moving" and "driver too far" as a share of CADF reasons.</p>
                   <div className="inline-flex items-center gap-2 border border-border px-3 py-2 mb-8">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Primary Metric</span>
                     <span className="text-[12px] font-light text-ink-soft">Chat open rate in first 60 sec</span>
                   </div>
-                  <div className="mb-8"><Img label="Chat entry point — control vs treatment" /></div>
+                  <div className="mb-8"><img src="/images/transit/Chat_EntryPoint.png" alt="Chat entry point — control vs treatment" className="w-full h-auto block" /></div>
                   <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
-                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Chat open rate remained low. Confirmed: individual touchpoints were directionally positive but statistically inconclusive in isolation. The system had to work as a whole.</p>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Inconclusive in isolation. Directionally positive, contributing ~1–2pp to the overall reduction when the full system ran together. Confirmed that single touchpoints couldn't move the metric alone.</p>
                   </div>
                 </div>
               </Reveal>
 
               {/* Experiment 03 */}
               <Reveal>
-                <div className="pt-8 border-t border-border">
+                <div className="mb-16 pt-8 border-t border-border">
                   <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Experiment 03</p>
-                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-8 text-ink">Dynamic Green Banner + Cancellation Friction</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-3">Hypothesis</p>
-                      <p className="text-[14px] font-light leading-[1.75] text-ink-soft">Combining contextual banner signals with segmented cancellation friction, personalised to archetype, will convert a meaningful share of about-to-cancel users into waiters.</p>
-                    </div>
-                    <div className="space-y-5">
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Control</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Fixed ETA, no contextual communication. Selecting any cancellation reason immediately triggered cancellation.</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Variant 1: Dynamic States</p>
-                        <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Banner surfaces system context: nearest driver search, cold-start state, driver quality. Gives users the perception that the system is actively working.</p>
-                      </div>
-                    </div>
-                  </div>
+                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Dynamic Green Banner</h3>
+                  <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[600px] mb-6">Surfacing the driver's first order of the day, paired with a preemptive chat nudge, will give users a reason to wait rather than cancel.</p>
                   <div className="inline-flex items-center gap-2 border border-border px-3 py-2 mb-8">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Primary Metric</span>
-                    <span className="text-[12px] font-light text-ink-soft">Cancellation reasons "Driver is too far" and "I've waited too long" as share of CADF</span>
+                    <span className="text-[12px] font-light text-ink-soft">"Driver is too far" and "I've waited too long" as share of CADF</span>
                   </div>
-                  <div className="mb-10"><Img label="Dynamic green banner — control vs variant 1 (dynamic states)" /></div>
-                  <div className="space-y-5 text-[15px] font-light leading-[1.75] text-ink-soft max-w-[660px] mb-10">
-                    <p><span className="font-semibold text-ink">Variant 2, Cancellation Friction (Rational Re-booker):</span> Friction copy challenges the core assumption: "Cancelling won't guarantee a faster driver. Your current driver is already on their way." Primary CTA: Keep my driver.</p>
-                    <p><span className="font-semibold text-ink">Variant 3, Emotional Appeal (Frustrated Waiter):</span> Driver photo + personalised message. "I'm on my way and arriving shortly. Please hold on, ETA is 5 mins." Adds a human face to the wait before the user decides.</p>
-                    <p><span className="font-semibold text-ink">Variant 4, Repeat Canceller:</span> Reinforces that frequent cancellations may increase wait time. Offers GoCar Prioritas as an alternative for users in a hurry.</p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    <Img label="Cancellation friction — rational re-booker variant" portrait />
-                    <Img label="Cancellation friction — emotional appeal (frustrated waiter)" portrait />
-                  </div>
-                  <div className="mb-10"><Img label="Cancellation friction — repeat canceller / Prioritas upsell" /></div>
+                  <div className="mb-10"><img src="/images/transit/Dynamic_Banner_FU.png" alt="Dynamic green banner — control vs treatment" className="w-full h-auto block" /></div>
                   <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
                     <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
-                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Cancellation reasons dropped significantly across friction variants. Dynamic banner alone produced ~2–3% reduction. Full system, banner and segmented friction together, produced the meaningful movement. The archetypes had to be treated differently; a single friction pattern across all three would not have worked.</p>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">~2–3pp reduction in CADF. The first-booking signal and preemptive chat together reduced early cancellations before anxiety built, but the use case is narrow. Not every trip qualifies.</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Experiment 04 */}
+              <Reveal>
+                <div className="pt-8 border-t border-border">
+                  <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Experiment 04</p>
+                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Dynamic Banner: Surfacing the ML Logic</h3>
+                  <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[600px] mb-6">Making the driver allocation ML logic visible during high-ETA waits will dilute the belief that cancelling and rebooking surfaces a faster driver.</p>
+                  <div className="inline-flex items-center gap-2 border border-border px-3 py-2 mb-8">
+                    <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Primary Metric</span>
+                    <span className="text-[12px] font-light text-ink-soft">"Driver is too far" and "I've waited too long" as share of CADF</span>
+                  </div>
+                  <div className="mb-8"><img src="/images/transit/ML_Logic.png" alt="Dynamic banner — ML state variants (searching / on the way / closer driver found)" className="w-full h-auto block" /></div>
+                  <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
+                    <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">"Driver too far" and "waited too long" dropped as a share of CADF, contributing approximately 3pp of the 9pp total reduction. Users who could see the system finding a closer driver were less likely to cancel and rebook.</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Experiment 05 */}
+              <Reveal>
+                <div className="mt-16 pt-8 border-t border-border">
+                  <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Experiment 05</p>
+                  <h3 className="font-sans text-[clamp(1.2rem,2vw,1.8rem)] font-bold tracking-[-0.03em] mb-4 text-ink">Cancellation Friction</h3>
+                  <p className="text-[14px] font-light leading-[1.75] text-ink-soft max-w-[600px] mb-8">Friction at the point of cancellation, personalised to the user's situation, will reduce completed cancellations.</p>
+
+                  <div className="space-y-6 mb-8">
+                    <div className="p-5 border border-border">
+                      <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Variant A · Repeat Canceller</p>
+                      <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Triggered on repeat cancellations. Adds a brief pause showing that frequent reorders extend wait time, then surfaces GoCar Prioritas as a faster alternative. Friction with a way out, not a block.</p>
+                    </div>
+                    <div className="p-5 border border-border">
+                      <p className="text-[11px] tracking-[0.1em] uppercase text-ink-muted font-medium mb-2">Variant B · Driver Already OTW</p>
+                      <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Triggered when the driver has already covered significant distance. Surfaces their photo and live ETA, giving the user a reason to reconsider. Makes the driver's effort visible at the moment of decision.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    <div className="inline-flex items-center gap-2 border border-border px-3 py-2">
+                      <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Variant A Metric</span>
+                      <span className="text-[12px] font-light text-ink-soft">Cancellation screen abandonment rate + concurrent booking rate</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 border border-border px-3 py-2">
+                      <span className="text-[10px] tracking-[0.1em] uppercase font-medium text-accent">Variant B Metric</span>
+                      <span className="text-[12px] font-light text-ink-soft">"I've waited too long" as share of CADF</span>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <img src="/images/transit/cancel_friction.png" alt="Cancellation friction — Variant A and Variant B" className="w-full h-auto block" />
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-ink/[0.025] border border-border">
+                    <span className="text-[10px] tracking-[0.1em] uppercase font-semibold text-ink mt-0.5 shrink-0">Result</span>
+                    <p className="text-[13px] font-light leading-[1.7] text-ink-soft">Contributed ~2-3pp of the 9pp total reduction. Variant A increased cancellation screen abandonment and reduced concurrent rebooking. Variant B reduced "I've waited too long" as a share of CADF.</p>
                   </div>
                 </div>
               </Reveal>
@@ -607,30 +612,29 @@ export default function CADFCaseStudy() {
                 </h2>
               </Reveal>
 
-              <div className="mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-px border border-border mb-8">
                 {[
                   {
-                    val: '25% → 16%',
+                    from: '25%', to: '16%',
                     head: 'CADF Rate in Bali',
-                    body: 'Nine percentage points off a rate that had been stable at 25%. The communication system, working as a whole, moved a metric that individual experiments could not shift in isolation.',
+                    body: '9pp reduction off a rate that had plateaued. Achieved across five sequential experiments in the Bali market pilot.',
                   },
                   {
-                    val: '~74%',
-                    head: '4W Reliability (BCR) improved',
-                    body: 'Booking Completion Rate improved from a 65% baseline. Fewer cancellations meant more completed rides and more earnings per hour for drivers.',
+                    from: '65%', to: '74%',
+                    head: 'Booking Completion Rate (4W)',
+                    body: 'BCR had been trending down before the intervention. Reducing post-match cancellations pushed it back up.',
                   },
-                  {
-                    val: '20%',
-                    head: 'Nationwide CADF, unchanged',
-                    body: 'The intervention was scoped to Bali as a market-specific pilot. The national number held at 20%. The measurement framework was handed to the inheriting team to scale.',
-                  },
-                ].map(({ val, head, body }, i) => (
-                  <Reveal key={val} delay={i * 0.07}>
-                    <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-5 md:gap-10 py-8 border-t border-border">
-                      <div className="font-sans text-[clamp(20px,2.8vw,36px)] font-bold tracking-[-0.04em] leading-none text-ink">{val}</div>
+                ].map(({ from, to, head, body }, i) => (
+                  <Reveal key={head} delay={i * 0.07}>
+                    <div className="p-8 bg-paper flex flex-col gap-5">
+                      <div className="flex items-end gap-3">
+                        <span className="font-sans text-[clamp(28px,3.5vw,48px)] font-bold tracking-[-0.04em] leading-none text-ink-muted/40">{from}</span>
+                        <span className="text-[18px] text-ink-muted/30 mb-1">→</span>
+                        <span className="font-sans text-[clamp(28px,3.5vw,48px)] font-bold tracking-[-0.04em] leading-none text-ink">{to}</span>
+                      </div>
                       <div>
-                        <h4 className="font-sans text-[15px] font-semibold text-ink mb-2">{head}</h4>
-                        <p className="text-[14px] font-light text-ink-soft leading-[1.75]">{body}</p>
+                        <h4 className="font-sans text-[13px] font-semibold text-ink mb-1.5">{head}</h4>
+                        <p className="text-[13px] font-light text-ink-soft leading-[1.7]">{body}</p>
                       </div>
                     </div>
                   </Reveal>
@@ -638,45 +642,41 @@ export default function CADFCaseStudy() {
               </div>
 
               <Reveal delay={0.1}>
-                <p className="text-[11px] font-light text-ink-muted italic max-w-[600px] border-t border-border pt-5 mb-12">
-                  Bali market, Phase 1. Post-ship instrumentation was not fully in place within the project tenure to capture clean cohort-level attribution. Numbers are directional.
+                <p className="text-[11px] font-light text-ink-muted italic max-w-[600px] border-t border-border pt-5">
+                  Bali market pilot. Post-ship instrumentation was not fully in place to capture clean cohort-level attribution. Numbers are directional.
                 </p>
-              </Reveal>
-
-              <Reveal delay={0.12}>
-                <div className="mb-4"><Img label="Early impact — Bali CADF reduction" /></div>
               </Reveal>
 
             </div>
           </section>
 
           {/* ── 8. REFLECTION ────────────────────────────────────────── */}
-          <section id="sec-reflection" className="py-24 border-b border-border px-10 md:px-16">
+          <section id="sec-reflection" className="py-20 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
                 <SectionLabel num="07" label="Reflection" />
-                <h2 className="font-sans text-[clamp(1.4rem,2.6vw,2.2rem)] font-bold tracking-[-0.04em] leading-[1.1] mb-12 text-ink">
-                  What I'd do differently.
-                </h2>
               </Reveal>
 
-              <div className="max-w-[680px] space-y-6 text-[17px] font-light leading-[1.9] text-ink-soft mb-16">
-                <Reveal><p>Instrument before you design. The measurement framework should have been scoped in Week 1 alongside the problem definition — not after the design was in development. The inability to attribute metric movement to individual touchpoints post-ship was a process failure, not a data one.</p></Reveal>
-                <Reveal delay={0.04}><p>Involve the ML team earlier. The discovery that the dispatch model was probabilistic, and that ETA was a distribution not a point estimate, came mid-project. Had this been surfaced in discovery, the design direction would have shifted to progress signals from the start rather than arriving at it after a pivot.</p></Reveal>
-                <Reveal delay={0.06}><p>Research the driver side. The cold-start problem and the driver's experience of customer anxiety were underexplored. A driver-side research sprint would have potentially unlocked a bidirectional communication design — something the final solution approached but never fully realised.</p></Reveal>
-                <Reveal delay={0.08}><p>Prototype the failure state, not just the happy path. Most prototyping time was spent on the smooth scenario. More time should have been spent on the 12-minute ETA, peak demand, no-movement edge case: the conditions where the design was most likely to fail.</p></Reveal>
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+                <div>
+                  <Reveal>
+                    <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-5 text-ink">What worked</h3>
+                    <div className="space-y-4">
+                      <Reveal><p className="text-[13px] font-light leading-[1.75] text-ink-soft"><strong className="font-semibold text-ink">Archetype segmentation.</strong> Framing three distinct user patterns gave the team a common reference point. It made prioritisation conversations between product, engineering, and data much easier to resolve.</p></Reveal>
+                      <Reveal delay={0.04}><p className="text-[13px] font-light leading-[1.75] text-ink-soft"><strong className="font-semibold text-ink">System framing.</strong> Treating the solution as a coordinated set of touchpoints, not a single screen fix, was the right call. The 9pp reduction came from the system working together, not any one experiment.</p></Reveal>
+                    </div>
+                  </Reveal>
+                </div>
 
-              <Reveal delay={0.06}>
-                <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.6rem)] font-bold tracking-[-0.03em] mb-7 text-ink">
-                  What worked.
-                </h3>
-              </Reveal>
-
-              <div className="max-w-[680px] space-y-6 text-[17px] font-light leading-[1.9] text-ink-soft">
-                <Reveal><p><strong className="font-semibold text-ink">The archetype segmentation.</strong> Framing the problem through three distinct user archetypes gave the team a shared language that cut across product, engineering, and data discussions. It made disagreements about prioritisation resolvable.</p></Reveal>
-                <Reveal delay={0.04}><p><strong className="font-semibold text-ink">The system framing.</strong> Insisting the solution be a coordinated touchpoint system rather than a single screen fix was the right call. The data confirmed it: individual touchpoints were directionally positive but statistically inconclusive in isolation.</p></Reveal>
-                <Reveal delay={0.06}><p><strong className="font-semibold text-ink">Naming the ML constraint publicly.</strong> Rather than designing around the probabilistic ETA issue silently, surfacing it as a product design constraint in a cross-functional review changed how engineering communicated the system's limitations and improved alignment across the team.</p></Reveal>
+                <div>
+                  <Reveal>
+                    <h3 className="font-sans text-[clamp(1.1rem,1.8vw,1.5rem)] font-bold tracking-[-0.03em] mb-5 text-ink">What could be better</h3>
+                    <div className="space-y-4">
+                      <Reveal><p className="text-[13px] font-light leading-[1.75] text-ink-soft"><strong className="font-semibold text-ink">Cold start problem.</strong> The chat entry point experiment didn't conclude strongly. New users with no ride history had no prior context to trust the channel. That cold start problem wasn't scoped before the experiment ran.</p></Reveal>
+                      <Reveal delay={0.04}><p className="text-[13px] font-light leading-[1.75] text-ink-soft"><strong className="font-semibold text-ink">Driver-side research.</strong> The driver's experience of customer anxiety was underexplored. More research on the driver side could have shaped a two-way communication design the final solution hinted at but didn't fully get to.</p></Reveal>
+                    </div>
+                  </Reveal>
+                </div>
               </div>
             </div>
           </section>
@@ -684,12 +684,12 @@ export default function CADFCaseStudy() {
           {/* ── Next project ─────────────────────────────────────────── */}
           <div className="px-10 md:px-16 w-full max-w-[800px] mx-auto">
             <Link
-              to="/case-study/01"
+              to="/case-study/03"
               className="flex justify-between items-center group cursor-pointer py-14 border-t border-border"
             >
               <div>
                 <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-2">Next Project</p>
-                <p className="text-[18px] font-semibold text-ink group-hover:text-accent transition-colors">GoTransit Pre-Booking Experience →</p>
+                <p className="text-[18px] font-semibold text-ink group-hover:text-accent transition-colors">Snippets: Gojek's Stories →</p>
               </div>
             </Link>
           </div>
