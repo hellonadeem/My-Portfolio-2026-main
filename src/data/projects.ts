@@ -35,7 +35,7 @@ export const projects: CaseStudyData[] = [
     platform: 'iOS · Android',
     img: '/images/Gotransit_Thumb.png',
     group: 'gojek',
-    description: 'How fixing the wrong mental model moved more people through Jakarta — and kept a product alive.',
+    description: '+48% CTR and +12% conversion to multimodal booking by redesigning the pre-booking experience to shift users from train ticketing to full journey planning.',
     sections: [
       {
         type: 'text',
@@ -222,7 +222,7 @@ The decisions that mattered most in this project happened before Figma — readi
     platform: 'iOS · Android',
     img: '/images/cadf/snippetsthumb.png',
     group: 'gojek',
-    description: 'Designing Gojek\'s in-app Stories channel from scratch, from inbox replacement to a live commerce and revenue-generating platform.',
+    description: '+77.6% CTR and 15.8K weekly transactions by designing Gojek\'s in-app Stories channel from inbox replacement to a live commerce platform.',
     sections: [
       {
         type: 'text',

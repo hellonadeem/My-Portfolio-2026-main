@@ -285,12 +285,12 @@ export default function SnippetsCaseStudy() {
           <section className="py-16 border-b border-border px-10 md:px-16">
             <div className="max-w-[800px] mx-auto">
               <Reveal>
-                <div className="border border-border p-8 md:p-10">
-                  <p className="text-[10px] tracking-[0.12em] uppercase text-ink-muted font-medium mb-4">Full case study in progress</p>
-                  <p className="text-[16px] font-light leading-[1.85] text-ink-soft max-w-[580px] mb-6">
-                    This project spans two years of design work across multiple product surfaces — the detailed write-up covering research, design decisions, experiment results, and visual explorations is being prepared.
+                <div className="border-l-2 border-accent bg-accent/[0.04] p-8 md:p-10">
+                  <p className="text-[10px] tracking-[0.12em] uppercase text-accent font-semibold mb-4">Full case study in progress</p>
+                  <p className="text-[16px] font-light leading-[1.85] text-ink max-w-[580px] mb-5">
+                    This project spans two years of design work across multiple product surfaces. The detailed write-up covering research, design decisions, experiment results, and visual explorations is being prepared.
                   </p>
-                  <p className="text-[15px] font-light leading-[1.8] text-ink-soft max-w-[580px]">
+                  <p className="text-[14px] font-light leading-[1.8] text-ink-soft max-w-[580px]">
                     Happy to walk through Snippets in depth during a conversation, including the zero-to-one process, how the format evolved, and the trade-offs made at each phase.
                   </p>
                 </div>

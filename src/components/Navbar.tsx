@@ -24,7 +24,11 @@ export default function Navbar() {
     if (href.startsWith('/#') && window.location.pathname === '/') {
       e.preventDefault();
       const id = href.replace('/#', '');
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      const el = document.getElementById(id);
+      if (el) {
+        const offset = el.getBoundingClientRect().top + window.scrollY - 48;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      }
     }
   };
 
