@@ -121,9 +121,6 @@ export default function SnippetsCaseStudy() {
                 Snippets: Gojek's In-App Stories Channel
               </h1>
 
-              <p className="text-[14px] text-ink-soft font-light mb-14">
-                Mohd Nadeem&nbsp;·&nbsp;Gojek&nbsp;·&nbsp;2022–2024
-              </p>
             </div>
           </section>
 

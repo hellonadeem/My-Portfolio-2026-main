@@ -173,10 +173,6 @@ export default function GoTransitCaseStudy() {
                 GoTransit's homepage was signalling the wrong product identity.
               </h1>
 
-              <p className="text-[14px] text-ink-soft font-light mb-14">
-                Mohd Nadeem&nbsp;·&nbsp;Gojek&nbsp;·&nbsp;2024
-              </p>
-
             </div>
           </section>
 
@@ -189,7 +185,7 @@ export default function GoTransitCaseStudy() {
               </div>
               <div>
                 <p className="text-[10px] font-medium tracking-[0.1em] uppercase text-ink-muted mb-1.5">Team</p>
-                <p className="text-[13px] text-ink font-light">Mita · Iqi · Hashir · Soozy · Binoy · Vaibhav</p>
+                <p className="text-[13px] text-ink font-light">PM · Research · Creative · Engineering</p>
               </div>
               <div>
                 <p className="text-[10px] font-medium tracking-[0.1em] uppercase text-ink-muted mb-1.5">Platform</p>

@@ -148,9 +148,6 @@ export default function ChatCaseStudy() {
                 Driver to Customer Chat
               </h1>
 
-              <p className="text-[14px] text-ink-soft font-light mb-14">
-                Mohd Nadeem&nbsp;·&nbsp;Gojek&nbsp;·&nbsp;2021–2023
-              </p>
             </div>
           </section>
 
