@@ -227,7 +227,7 @@ export default function GoTransitCaseStudy() {
                   Why This Mattered
                 </h2>
                 <div className="space-y-5 text-[16px] font-light leading-[1.85] text-ink-soft mb-10 max-w-[660px]">
-                  <p>GoTransit carried a real partnership cost to sell KRL tickets on Gojek. A train ticket priced in the low thousands of rupiah barely moved the margin. GoRide did. Every multimodal booking was where the unit economics worked. Every train-only booking was a missed opportunity the product couldn't afford. <strong className="font-semibold text-ink">The business target: ~900K multimodal bookings per month to reach breakeven. We were nowhere near it.</strong></p>
+                  <p>Selling KRL tickets came with a real partnership cost. A train ticket priced in the low thousands of rupiah barely moved the margin, but the GoRide legs on either end of the journey did. Multimodal bookings were where the unit economics actually worked, and train-only bookings were leaving that value on the table. <strong className="font-semibold text-ink">The business needed ~900K multimodal bookings per month to reach breakeven. We were nowhere near it.</strong></p>
                 </div>
               </Reveal>
 
