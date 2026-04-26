@@ -158,10 +158,10 @@ export default function SnippetsCaseStudy() {
 
               <div className="space-y-5 text-[16px] font-light leading-[1.85] text-ink-soft max-w-[660px]">
                 <Reveal>
-                  <p>Snippets is an in-app communication channel inside the Gojek super-app that adopts the Stories format — short-lived, highly visual, and neatly sequenced, to deliver content across the entire Gojek ecosystem without being tethered to a single product surface.</p>
+                  <p>Snippets is an in-app communication channel inside the Gojek super-app that adopts the Stories format: short-lived, highly visual, and neatly sequenced, delivering content across the entire Gojek ecosystem without being tethered to a single product surface.</p>
                 </Reveal>
                 <Reveal delay={0.04}>
-                  <p>The original brief was to replace Gojek's inbox — a static, low-engagement channel where all in-app communication sat. The inbox wasn't designed for the pace or richness of what Gojek needed to communicate: new feature launches, merchant promotions, order feedback, cross-sell moments, and more.</p>
+                  <p>The original brief was to replace Gojek's inbox, a static, low-engagement channel where all in-app communication sat. The inbox wasn't designed for the pace or richness of what Gojek needed to communicate: new feature launches, merchant promotions, order feedback, cross-sell moments, and more.</p>
                 </Reveal>
                 <Reveal delay={0.06}>
                   <p>Snippets gave product groups across GoFood, GoPay, GoMart, and Transport a shared channel to tell visual stories, run interactive campaigns, and collect granular feedback, all without fragmenting the user experience across separate surfaces.</p>
@@ -170,7 +170,7 @@ export default function SnippetsCaseStudy() {
 
               <Reveal delay={0.08}>
                 <div className="mt-12">
-                  <img src="/images/cadf/snippetsthumb.png" alt="Snippets — two homepage treatment explorations on Gojek" className="w-full h-auto block" />
+                  <img src="/images/cadf/snippetsthumb.png" alt="Snippets: two homepage treatment explorations on Gojek" className="w-full h-auto block" />
                 </div>
               </Reveal>
             </div>
@@ -204,13 +204,13 @@ export default function SnippetsCaseStudy() {
                     phase: 'Phase 03',
                     year: '2023–2024',
                     title: 'GoFood discovery & add-to-cart',
-                    body: 'Extended Snippets into GoFood as a merchant visibility and conversion channel. Merchants could showcase menu items with promos directly in the Snippets format. Users could add items to cart without leaving the Story — directly increasing AOV.',
+                    body: 'Extended Snippets into GoFood as a merchant visibility and conversion channel. Merchants could showcase menu items with promos directly in the Snippets format. Users could add items to cart without leaving the Story, directly increasing AOV.',
                   },
                   {
                     phase: 'Phase 04',
                     year: '2024',
                     title: 'Live stream & GoMart commerce',
-                    body: 'Scaled the format to live video and live stream shopping on GoMart. Cross-sell initiatives with GoTo partners brought Snippets into the commerce layer — turning a communication channel into a revenue and ad-generating surface across the entire super-app.',
+                    body: 'Scaled the format to live video and live stream shopping on GoMart. Cross-sell initiatives with GoTo partners brought Snippets into the commerce layer, turning a communication channel into a revenue and ad-generating surface across the entire super-app.',
                   },
                 ].map(({ phase, year, title, body }, i) => (
                   <Reveal key={phase} delay={i * 0.06}>
