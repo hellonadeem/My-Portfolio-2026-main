@@ -1,0 +1,189 @@
+GoCar CADF — Cancellation After Driver Found
+Case Study — Mohd Nadeem, Lead Product Designer, Gojek, 2024–25
+Tags: CADF · GoCar · Android & iOS
+Team: UX Writers · Researcher · PM
+Timeline: 4 Weeks
+
+────────────────────────────────────────────────────────────────
+TITLE
+────────────────────────────────────────────────────────────────
+
+Reduce Cancellation from 25% to 16% in Bali
+Cancellation After Driver Found (CADF)
+
+────────────────────────────────────────────────────────────────
+01. CONTEXT — One in four matched bookings cancelled. After a driver was already found.
+────────────────────────────────────────────────────────────────
+
+GoCar is Gojek's four-wheel ride-hailing product, operating in one of Southeast Asia's most competitive mobility markets. In Bali, the pressure is particular: high tourist demand, seasonal supply fluctuations, and a rider base with ready access to alternatives ranging from ojeks to private car rentals.
+
+Reliability — the ratio of bookings completed to bookings initiated — had been trending downward, averaging around 65% over a sustained two-week window. Within those lost bookings, Cancellation After Driver Found (CADF) was the dominant failure mode.
+
+Key numbers:
+- 25% CADF Rate in Bali (vs 20% national average)
+- 93% Customer-Initiated (not driver or system)
+- 65% Avg Reliability (BCR) over a 2-week window
+
+A CADF event isn't an abandoned search. It's a completed match that failed after the driver was already assigned. The driver has accepted, routing has begun, supply has been allocated. The cancellation wastes driver time, reduces their earnings-per-hour, and re-enters the customer into the queue — often at a higher ETA than before.
+
+Over time, repeated CADF experiences erode trust in GoCar's reliability.
+
+────────────────────────────────────────────────────────────────
+MY ROLE & APPROACH
+────────────────────────────────────────────────────────────────
+
+Ownership: Led the project from problem definition to shipped solution.
+Data: Partnered with the data team to segment cancellation logs before any design work began.
+Engineering: Worked closely with ML and engineering to understand how the dispatch system works.
+Research: Collaborated with UX research to validate early hypotheses and anecdotal feedback.
+Writing: Worked closely with a UX writer throughout. This project was fundamentally about reassurance and communication.
+PM: Partnered with my PM to prioritise experiments and phase the solution rollout.
+
+────────────────────────────────────────────────────────────────
+02. ILLUMINATE — We dug into the data.
+────────────────────────────────────────────────────────────────
+
+Why are customers cancelling after a driver has already been found?
+
+We started with cancellation reason data to understand what riders were selecting when they cancelled. The numbers pointed to patterns. We then ran qualitative research with riders and drivers to understand the anxiety behind each one.
+
+— Why were users cancelling? —
+
+Cancellation reasons (share of CADF):
+- I've waited too long      25.1%  [highlighted]
+- Driver is too far         19.4%  [highlighted]
+- Driver not moving          9.4%  [highlighted]
+- Cancel with no reason      6.0%
+- Found another ride         5.0%
+- Others                    35.1%
+
+Data Point: Cancellation risk spiked in the first 60 sec after driver assignment, before the customer saw any movement.
+
+— What drivers and riders told us —
+
+Driver: "If they don't reply to my first message I know they're going to cancel. I always message first now, early, before they have a chance to worry."
+
+Rider: "If the driver is far I just cancel and rebook. Usually you get someone better the second time."
+
+Driver: "The first minute is the dangerous one. After that they can see me moving and they relax. But in that first minute they can't see anything."
+
+The quant told us what users were doing. The qual told us why. Together, they pointed to something the raw numbers alone couldn't show: these weren't the same user cancelling for the same reason.
+
+────────────────────────────────────────────────────────────────
+03. KEY INSIGHTS — Not one problem. Three fundamentally different users.
+────────────────────────────────────────────────────────────────
+
+Combining cancellation reason data with driver and rider voices, we identified three distinct behavioural patterns. Not variations of the same problem. Three different anxieties, each requiring a different design response.
+
+Pattern 01 — Driver not moving
+Signal: "Driver too far" · "Not moving"
+Share: ~29% of CADF reasons
+Insight: Does not want to cancel. Wants to feel safe waiting. Needs context, not just an ETA.
+
+Pattern 02 — Waited too long
+Signal: "Waited too long"
+Share: 25.1% of CADF reasons
+Insight: Frustration has already peaked by the time they cancel. Needs earlier intervention, before they reach that point.
+
+Pattern 03 — Cancel and rebook
+Signal: Cancels within first 60 sec
+Share: Serial re-booker pattern
+Insight: Believes cancelling and restarting yields a faster driver. This is a perception problem, not an ETA problem.
+
+────────────────────────────────────────────────────────────────
+04. DESIGN — Three anxieties. Four touchpoints. One system.
+────────────────────────────────────────────────────────────────
+
+A single screen fix wouldn't move the metric. The hypothesis was a coordinated system of four touchpoints, each mapped to a specific archetype and moment in the post-assignment journey. Individual experiments were directional. The system is what moved the number.
+
+Touchpoint 01 — Push Notification
+What was broken: Static template regardless of driver distance, demand, or cold-start state.
+Hypothesis: Three dynamic PN themes (Urgency, Quality, Reliability) selected by ML dispatch signals.
+
+Touchpoint 02 — OTW Screen: Green Banner
+What was broken: Static ETA and driver details. No context for why ETA was high or driver wasn't moving.
+Hypothesis: Dynamic contextual signals — traffic, cold-start state, or driver quality. Triggered only when relevant.
+
+Touchpoint 03 — Chat & Auto-Response Messaging
+What was broken: Chat buried two taps deep. No proactive outreach during the wait.
+Hypothesis: System-initiated nudge after a wait threshold. One-tap auto-populated message sent on behalf of the driver reduces anxiety on both sides.
+
+Touchpoint 04 — Cancellation Friction
+What was broken: Selecting a reason immediately triggered cancellation, with no confirmation, no context, no reconsideration.
+Hypothesis: Segmented friction personalised by cancellation timing and behaviour pattern. Different response for each archetype.
+
+────────────────────────────────────────────────────────────────
+05. EXPERIMENTS — Each experiment built on the last.
+────────────────────────────────────────────────────────────────
+
+Touchpoints were tested sequentially. Each one was directional on its own. Combined as a system, they produced the metric movement that no single experiment could achieve in isolation.
+
+— Experiment 01: Push Notification —
+
+Hypothesis: An ML-triggered PN with context-aware copy will reduce cold-start anxiety in the first 120 seconds after driver assignment.
+Primary Metric: Chat open rate in first 60 sec after assignment
+
+Result: Chat open rate didn't move in the first two weeks. PN alone wasn't enough. Reassurance at assignment doesn't hold a user who's already decided to cancel.
+
+— Experiment 02: Chat Entry Point —
+
+Hypothesis: A contextual chat nudge on the OTW screen will reduce "driver not moving" and "driver too far" as a share of CADF reasons.
+Primary Metric: Chat open rate in first 60 sec
+
+Result: Inconclusive in isolation. Directionally positive, contributing ~1–2pp to the overall reduction when the full system ran together. Confirmed that single touchpoints couldn't move the metric alone.
+
+— Experiment 03: Dynamic Green Banner —
+
+Hypothesis: Surfacing the driver's first order of the day, paired with a preemptive chat nudge, will give users a reason to wait rather than cancel.
+Primary Metric: "Driver is too far" and "I've waited too long" as share of CADF
+
+Result: ~2–3pp reduction in CADF. The first-booking signal and preemptive chat together reduced early cancellations before anxiety built, but the use case is narrow. Not every trip qualifies.
+
+— Experiment 04: Dynamic Banner — Surfacing the ML Logic —
+
+Hypothesis: Making the driver allocation ML logic visible during high-ETA waits will dilute the belief that cancelling and rebooking surfaces a faster driver.
+Primary Metric: "Driver is too far" and "I've waited too long" as share of CADF
+
+Result: "Driver too far" and "waited too long" dropped as a share of CADF, contributing approximately 3pp of the 9pp total reduction. Users who could see the system finding a closer driver were less likely to cancel and rebook.
+
+— Experiment 05: Cancellation Friction —
+
+Hypothesis: Friction at the point of cancellation, personalised to the user's situation, will reduce completed cancellations.
+
+Variant A — Repeat Canceller:
+Triggered on repeat cancellations. Adds a brief pause showing that frequent reorders extend wait time, then surfaces GoCar Prioritas as a faster alternative. Friction with a way out, not a block.
+Metric: Cancellation screen abandonment rate + concurrent booking rate
+
+Variant B — Driver Already OTW:
+Triggered when the driver has already covered significant distance. Surfaces their photo and live ETA, giving the user a reason to reconsider. Makes the driver's effort visible at the moment of decision.
+Metric: "I've waited too long" as share of CADF
+
+Result: Contributed ~2–3pp of the 9pp total reduction. Variant A increased cancellation screen abandonment and reduced concurrent rebooking. Variant B reduced "I've waited too long" as a share of CADF.
+
+────────────────────────────────────────────────────────────────
+06. IMPACT — What the numbers said.
+────────────────────────────────────────────────────────────────
+
+CADF Rate in Bali: 25% → 16%
+9pp reduction off a rate that had plateaued. Achieved across five sequential experiments in the Bali market pilot.
+
+Booking Completion Rate (4W): 65% → 74%
+BCR had been trending down before the intervention. Reducing post-match cancellations pushed it back up.
+
+Note: Bali market pilot. Post-ship instrumentation was not fully in place to capture clean cohort-level attribution. Numbers are directional.
+
+────────────────────────────────────────────────────────────────
+07. REFLECTION
+────────────────────────────────────────────────────────────────
+
+What worked:
+
+Archetype segmentation. Framing three distinct user patterns gave the team a common reference point. It made prioritisation conversations between product, engineering, and data much easier to resolve.
+
+System framing. Treating the solution as a coordinated set of touchpoints, not a single screen fix, was the right call. The 9pp reduction came from the system working together, not any one experiment.
+
+What could be better:
+
+Cold start problem. The chat entry point experiment didn't conclude strongly. New users with no ride history had no prior context to trust the channel. That cold start problem wasn't scoped before the experiment ran.
+
+Driver-side research. The driver's experience of customer anxiety was underexplored. More research on the driver side could have shaped a two-way communication design the final solution hinted at but didn't fully get to.

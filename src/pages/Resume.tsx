@@ -193,11 +193,6 @@ export default function Resume() {
                   <p className="text-[13px] text-ink-soft">AAASP (Digital & Animation)</p>
                   <p className="text-[12px] text-ink-muted mt-1">2008 - 2011</p>
                 </div>
-                <div>
-                  <h4 className="text-[14px] font-bold uppercase tracking-wider mb-1">Delhi University</h4>
-                  <p className="text-[13px] text-ink-soft">Undergraduate Coursework</p>
-                  <p className="text-[12px] text-ink-muted mt-1">2013 - 2015</p>
-                </div>
               </div>
             </section>
 

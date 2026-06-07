@@ -1,0 +1,277 @@
+GoTransit Pre-Booking Experience
+Case Study — Mohd Nadeem, Lead Product Designer, Gojek, 2024
+Tags: Redesign · Multimodal Transit · Android & iOS
+Team: PM · Research · Creative · Engineering
+
+────────────────────────────────────────────────────────────────
+TITLE
+────────────────────────────────────────────────────────────────
+
+GoTransit's homepage was signalling the wrong product identity.
+
+────────────────────────────────────────────────────────────────
+01. CONTEXT — The Feature Nobody Used
+────────────────────────────────────────────────────────────────
+
+Late 2023. GoTransit launched multimodal booking. GoRide to the station, KRL train, GoRide out the other end. One order. One payment. First mile to last mile, connected inside Gojek.
+
+It should have changed how Jakarta moved.
+
+It didn't.
+
+Users kept doing what they always did. Open GoTransit. Buy a train ticket. Leave. Book a GoRide separately, somewhere else. The multimodal feature was live, technically working, and practically invisible.
+
+────────────────────────────────────────────────────────────────
+WHY THIS MATTERED
+────────────────────────────────────────────────────────────────
+
+Selling KRL tickets came with a real partnership cost. A train ticket priced in the low thousands of rupiah barely moved the margin, but the GoRide legs on either end of the journey did. Multimodal bookings were where the unit economics actually worked, and train-only bookings were leaving that value on the table. The business needed ~900K multimodal bookings per month to reach breakeven. We were nowhere near it.
+
+The instinct from the product team was upsell prompts. Surface GoRide after a KRL booking. Fast to ship. Reasonable.
+
+My read was different. Upsell mechanics work when users understand the product and need a nudge. They don't work when users have already decided what the product is for. And decided wrong.
+
+────────────────────────────────────────────────────────────────
+02. RESEARCH — The Funnel Told Us Where to Look
+────────────────────────────────────────────────────────────────
+
+Funnel data:
+- 2.1M users reached the GoTransit homepage every month
+- 12.98% tapped the multimodal entry point
+- 4.37% completed a multimodal booking
+
+An 87% drop before users even entered the flow. 42% of all bookings were middle-mile only.
+
+On paper this looked like a discoverability problem. Make the button bigger. Add a nudge. Ship a banner. That would have been the wrong diagnosis entirely.
+
+— What We Assumed Before We Researched Anything —
+
+Before going to the field, we ran a heuristic audit of the existing homepage. We documented our assumptions so we would know later what the research confirmed, contradicted, or surprised us with.
+
+Assumption 01 — Search bar misread:
+"Enter your end destination" under a train banner felt like it was priming station lookup, not journey planning.
+
+Assumption 02 — Masthead teaching wrong product:
+A rotating carousel featuring a train prominently was signalling single-mode transit, not multimodal.
+
+Assumption 03 — Service grid anchoring tickets:
+"Buy KRL ticket" and "Buy TransJakarta ticket" as the first two interactions on the page.
+
+These were hypotheses, not conclusions. We needed to go find out whether real users experienced what we thought they were experiencing.
+
+— Field Research —
+
+I was new to Indonesian commuter culture. I knew the data. I didn't know the experience.
+
+Before touching Figma, I pushed for field research. Together with Iqi, our researcher, we rode KRL during peak and off-peak hours. We shadowed commuters end-to-end, from home to station to train to destination. We sat with users in their homes and offices and watched them plan and book their commutes in real conditions.
+
+We also ran a problem discovery workshop and usability testing on the existing flow with a mix of user types: first-time GoTransit users, KRL regulars who had never tried multimodal, and users who had booked multimodal at least once.
+
+What I saw reframed everything.
+
+Observation 01 — The Jakarta commute is not a single decision.
+It is a chain of micro-decisions made under pressure. Which entrance. Which platform. Will I make this train. Is there a GoRide available at that station at 7am. Every decision made in motion, with noise, with crowds, on a phone that has to be read fast.
+
+Observation 02 — Users had fixed mental models about what each app was for.
+Gojek was for rides. GoTransit was for train tickets. Not journeys. Not planning. Tickets. The UI was not creating this belief. It was confirming one that already existed, cementing it deeper with every visit.
+
+— What the Research Confirmed —
+
+1. The pre-booking flow was reinforcing the wrong mental model.
+Users arrived believing GoTransit was a train ticketing tool. The surface confirmed it before they interacted with anything.
+
+2. Context shapes behavior more than interface does.
+Users near a station were in execution mode: narrow bandwidth, one job, committed to the train leg already. Users at home or the office were in planning mode: open to thinking about the full journey.
+
+3. The commute is a chain of decisions, not one task.
+Each leg is its own cognitive event. The interface had to meet users at each of those moments, not assume they were thinking in three-leg journeys from the start.
+
+Our audit assumptions were right. But the research gave us something the audit couldn't: the reason behind the behavior.
+
+It was not that users couldn't find multimodal. It was that they had already decided what the product was before they looked for anything.
+
+────────────────────────────────────────────────────────────────
+03. STRATEGY — Alignment: The hardest design work wasn't in Figma
+────────────────────────────────────────────────────────────────
+
+When we brought our findings back and proposed redesigning the homepage, we hit a wall.
+
+GoTransit was a new product. Engineering was conservative. Any significant change touched a legacy search system shared across Gojek's booking flows. Product leadership questioned the investment.
+
+The honest answer was: this was exactly the moment to fix it. Mental models cement early. If we didn't fix this now, we would spend years fighting a perception we had let harden.
+
+But conviction doesn't move roadmaps. Strategy does.
+
+So I built a 2-year design vision for GoTransit. Not a mood board, but a phased roadmap with timelines, explicitly connected to the path toward 900K multimodal bookings.
+
+I presented this to product leadership, the engineering lead, and the VP of Design. The goal was not approval for everything. It was to show we had a coherent theory: this was not a designer wanting to redraw screens, but a team with a clear strategy for how design could close the gap to 900K.
+
+Instead of "homepage revamp," we proposed "first-fold improvement": just the search bar, masthead, and service grid. The slice users see before they scroll. The slice doing the most damage to perception.
+
+Engineering could scope it. Leadership could see the logic. We had our green light.
+
+────────────────────────────────────────────────────────────────
+04. DESIGN — Diverging Hard
+────────────────────────────────────────────────────────────────
+
+Before screens, we mapped how different users actually move through the product. Four user types. Four different intents. One homepage trying to serve all of them.
+
+User type table:
+- New transit user     | Never booked before   | Understand what the product does first
+- First mile user      | GoRide then KRL        | Start with location, think in legs
+- Middle mile user     | Train ticket only      | Fast path to KRL, already decided
+- Multimodal user      | GoRide + KRL + GoRide  | One search, one order, no switching
+
+— Search Exploration —
+
+The search bar was the first interactive element on the page. It was also doing the most damage, priming station lookup instead of journey planning.
+
+Our first instinct was to make search the hero. Two fields, clearly labelled. Where you are, where you're going. Auto-detect location. Make it feel like a journey planner, not a ticket counter.
+
+We explored several directions in parallel:
+
+1. Personalised search states — Detect the user's proximity to a station and pre-fill it as origin. Pull from GoRide history to surface frequent routes.
+2. Animated journey icon — Motorbike to train to motorbike, a subtle motion inside the search field. A visual metaphor baked into the moment before you type.
+3. Reframed copy variants — "Book your full journey." "GoRide + KRL, one order." "Where are you headed today?" Testing whether language alone could shift the mental model.
+4. Dynamic history — Surface recent GoRide routes as multimodal suggestions, making new behavior feel like a natural extension of the old.
+
+Then we hit a constraint.
+
+Engineering flagged that the dual-field search required changes to a legacy system shared across Gojek's primary booking flow. Not a styling change. A significant backend decision, not scoped for Phase 1.
+
+We pushed back. We presented the user research. We showed that a single-field search, regardless of copy, would still read as station lookup in the existing page context, because it was structurally identical to what it replaced.
+
+Engineering came around. We aligned on the two-field search as the right architecture for communicating journey planning intent.
+
+— The Masthead Problem —
+
+The original masthead: static banner, Gojek 2D illustration library, standard value props. Clean. On-brand. Forgettable. Featuring a train.
+
+The creative team, Hashir and Soozy, ran a benchmarking exercise across transit apps globally: Citymapper, Transit, Moovit, regional Southeast Asian players. What came back: almost every competitor defaulted to iconography and feature lists in the hero space. Almost nobody was telling a story.
+
+That was the opening.
+
+Our conviction: the masthead needed to narrate the actual GoTransit experience. Not list benefits. Tell the story of the journey in sequence, the way it actually happens.
+
+We pushed for a horizontal scrolling narrative carousel, not auto-rotating, but inviting the user to move through moments:
+
+Frame 1: You're home. You need to get somewhere.
+Frame 2: A GoRide picks you up.
+Frame 3: You tap your QR at the station gate.
+Frame 4: You're on the train. Another GoRide is waiting at the other end.
+Frame 5: You've arrived. Door to door, one order.
+
+────────────────────────────────────────────────────────────────
+05. TESTING — What Broke, What We Fixed
+────────────────────────────────────────────────────────────────
+
+With designs converged, we moved into structured prototype testing across two rounds, with deliberate changes between them.
+
+We wanted to understand something specific beyond the UI: do users naturally think in legs? When someone opens GoTransit, are they thinking about the full journey, or one leg at a time?
+
+We recruited across two distinct contexts:
+- Near or at a station: Users already in transit mode, mid-commute, making booking decisions under time pressure.
+- At home or at the office: Users planning ahead, with more cognitive space to think through the full journey.
+
+— Round 1: Testing Core Hypotheses —
+
+12 participants split across context and usage profile:
+- 3 users at / near a KRL station
+- 3 users at home or office
+- 3 KRL regulars, never tried multimodal
+- 3 users, booked multimodal at least once
+
+Findings:
+
+On mental model:
+The shift was happening but unevenly. 8 of 12 participants described the new search as "booking a trip" rather than "finding a station." Meaningful progress over baseline, but users near the station defaulted faster to single-leg behavior. They were already committed to the train leg. The homepage had a narrow window.
+
+On leg-booking behavior:
+Users at home or planning ahead were significantly more open to booking two or three legs. Users near the station almost universally booked one leg at a time. The environment was shaping cognition as much as the interface was.
+
+On the masthead:
+It was not reading as a sequence. 6 of 12 users consumed the carousel frames as independent illustrations; they appreciated the visual quality but missed the narrative arc connecting them. The story we had worked hard to tell was not landing as a story.
+
+On the search:
+The two-field structure created an unexpected question ("Does it know where I am, or do I type it?") that the original single-field search never triggered. A new friction point we had introduced ourselves.
+
+— What We Changed Before Round 2 —
+
+1. Search field location state: Added a location-detect indicator to the first field, a pulsing state showing "Your current location." It answered the question before it became friction.
+
+2. Masthead: from 2D to 3D illustration: The Round 1 feedback pointed at something deeper than narrative structure. The standard Gojek 2D library was not visually distinct enough to hold attention. The frames were blending into the green homepage.
+
+We made the call to push toward monochromatic 3D illustration. More sculptural, more tactile, a visual language that felt elevated, genuinely fresh within Gojek's broader design system.
+
+I pushed the creative team hard on this. There were rounds where the color sat too heavy against the page. Rounds where characters felt stiff. Rounds where contrast was wrong and the frames weren't reading as connected.
+
+— Round 2: Validating Changes, Testing Copy Variants —
+
+10 participants. 5 returning from Round 1 to measure mental model shift, 5 new as a fresh signal. Same context split.
+
+Findings:
+
+The 3D masthead was working:
+9 of 10 participants described the carousel as showing "steps" or "a journey", up from 6 of 12 in Round 1. The visual elevation was doing more than aesthetic work: it was slowing users down enough to actually read the sequence.
+
+The station-context pattern held:
+Users near stations still defaulted to single-leg booking regardless of which variant they saw. This confirmed our Round 1 hypothesis: the homepage redesign was the right lever for the planning mindset, not the in-motion user. We documented this clearly as input for Phase 2.
+
+────────────────────────────────────────────────────────────────
+06. SHIPPED — What Shipped (Phase 1: the new first fold)
+────────────────────────────────────────────────────────────────
+
+Search:
+Two-field journey planner with location detection, contextual empty states, and copy that frames the interaction as trip planning.
+
+Masthead:
+Horizontal narrative carousel with monochromatic 3D illustrations. Five frames telling the GoTransit journey from home to destination. A new visual direction for the product and for Gojek's illustration language.
+
+Service Grid:
+Reordered to lead with the multimodal journey entry point ahead of individual ticket purchases.
+
+────────────────────────────────────────────────────────────────
+PHASE 2 THINKING — The Unsolved Problem
+────────────────────────────────────────────────────────────────
+
+The near-station user remains a fundamentally different cognitive state. First mile is done. They're at the platform in execution mode: time, platform, tap, go. Cognitive bandwidth is narrow. The homepage redesign could not reach them.
+
+That population needed a different intervention, further into the booking flow or in the post-booking experience. We documented three directions for Phase 2:
+
+1. Destination-triggered last mile prompt:
+When a near-station user enters their destination, surface a single contextual line before they confirm: "GoRide from [arrival station], usually available in 3 mins." No modal. No extra screen.
+
+2. Flip the default on results:
+Rather than presenting KRL-only as the top result, show the two-leg option as the recommended result with a clear time and cost breakdown.
+
+3. Arrival anticipation during journey:
+Once the user is on the train, surface a nudge as they approach their destination: "Arriving in ~8 mins. Add a GoRide for the last mile?" Cognitive bandwidth is back. The ask feels helpful.
+
+────────────────────────────────────────────────────────────────
+07. IMPACT — What the Numbers Said
+────────────────────────────────────────────────────────────────
+
++48% CTR on the multimodal search bar
+Users who previously ignored the multimodal entry point were clicking in. The reframed search, the narrative masthead, the identity shift. Something in that combination moved the first interaction significantly.
+
++12% Conversion to multimodal booking
+The signal travelled all the way through the funnel. Users entering the search flow were converting to completed multimodal bookings at a meaningfully higher rate. Perception change was translating into behavior change.
+
+−3.5% Individual ticket booking conversion
+This one looks like a regression. It isn't. Users who previously came to buy a train ticket were now entering the multimodal flow instead. They were being redirected from a low-margin behavior to a higher-margin one. That decline was the behavioral shift we designed for.
+
+Note: iOS results following Phase 1 launch. No formal A/B test was run. Other product changes were running in parallel, so these numbers are directional, not causally attributed to the redesign alone.
+
+────────────────────────────────────────────────────────────────
+08. REFLECTION — What I Learned
+────────────────────────────────────────────────────────────────
+
+The decisions that mattered most in this project happened before I opened Figma.
+
+Correctly reading the 87% drop as a comprehension failure, not a conversion problem. Pushing design into an OKR conversation that was heading toward upsell prompts. Building the organizational alignment for a phased strategy when the easier path was to ship a banner. Knowing when to push back on engineering constraints and when to hold the line.
+
+A lead-level contribution is not measured in beautiful screens. It is measured in whether you diagnosed the right problem, built the conditions for the right solution to reach users, and left something the team could build on after you moved on.
+
+But what I'm most proud of is not the 48% CTR uplift. It's the vision document, the thing that gave a new, under-resourced product a design strategy it could actually grow into.
+
+That's the work that outlasts the pixels.
