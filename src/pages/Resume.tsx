@@ -11,7 +11,7 @@ export default function Resume() {
   }, []);
 
   const handleDownloadPDF = () => {
-    const externalPdfUrl = "https://drive.google.com/file/d/1RQ5jjbnTbT0oKMjjhz71u5znuoRYlSiR/view?usp=sharing";
+    const externalPdfUrl = "https://drive.google.com/file/d/1oHXZyFzsmT9SaW-NsYiJ-PllptUelsoL/view?usp=drive_link";
     window.open(externalPdfUrl, '_blank');
   };
 
